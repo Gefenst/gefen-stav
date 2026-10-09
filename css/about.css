@@ -1,0 +1,243 @@
+.about {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-text-light);
+  padding-block: clamp(70px, 8vw, 130px);
+}
+
+/* Same tiny star/x scatter as the Hero, in the same four project colors -
+   a light callback, not a repeat of the full doodle set. */
+.about__scatter {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.about__scatter-mark {
+  position: absolute;
+  opacity: 0.55;
+}
+
+/* Matches the reference: marks tucked into whatever whitespace is
+   actually there at each height - right beside a heading's short
+   text, in the narrow gap between the text column and the
+   illustration, as well as the open bands above/below everything -
+   not only hugging the two outer edges. */
+.about__scatter-mark--1 { top: 14%; left: 38%; width: 14px; height: 14px; transform: rotate(-8deg); color: #3e9b96; }
+.about__scatter-mark--2 { top: 9%; left: 76%; width: 12px; height: 12px; transform: rotate(10deg); color: #3e6fa8; }
+.about__scatter-mark--3 { top: 28%; left: 13%; width: 10px; height: 10px; transform: rotate(-5deg); color: #5e693d; }
+.about__scatter-mark--4 { top: 29%; left: 93%; width: 16px; height: 16px; transform: rotate(12deg); color: #a8527a; }
+.about__scatter-mark--5 { top: 42%; left: 60%; width: 11px; height: 11px; transform: rotate(-10deg); color: #3e6fa8; }
+.about__scatter-mark--6 { top: 56%; left: 5%; width: 13px; height: 13px; transform: rotate(8deg); color: #3e9b96; }
+.about__scatter-mark--7 { top: 60%; left: 90%; width: 9px; height: 9px; transform: rotate(-14deg); color: #a8527a; }
+.about__scatter-mark--8 { top: 64%; left: 39%; width: 15px; height: 15px; transform: rotate(6deg); color: #5e693d; }
+.about__scatter-mark--9 { top: 83%; left: 11%; width: 12px; height: 12px; transform: rotate(-9deg); color: #a8527a; }
+.about__scatter-mark--10 { top: 92%; left: 56%; width: 11px; height: 11px; transform: rotate(7deg); color: #3e9b96; }
+.about__scatter-mark--11 { top: 94%; left: 93%; width: 13px; height: 13px; transform: rotate(-11deg); color: #3e6fa8; }
+
+/* This is meant to read as background texture, so it should get denser
+   as the canvas gets bigger, not just stretch the same 11 marks over
+   more space. Extra marks are hidden until the viewport is wide enough
+   to fit them without crowding. */
+.about__scatter-mark--12,
+.about__scatter-mark--13,
+.about__scatter-mark--14,
+.about__scatter-mark--15,
+.about__scatter-mark--16,
+.about__scatter-mark--17,
+.about__scatter-mark--18,
+.about__scatter-mark--19 {
+  display: none;
+}
+
+.about__scatter-mark--12 { top: 18%; left: 58%; width: 11px; height: 11px; transform: rotate(9deg); color: #3e9b96; }
+.about__scatter-mark--13 { top: 50%; left: 3%; width: 12px; height: 12px; transform: rotate(-7deg); color: #3e6fa8; }
+.about__scatter-mark--14 { top: 70%; left: 93%; width: 10px; height: 10px; transform: rotate(13deg); color: #5e693d; }
+.about__scatter-mark--15 { top: 97%; left: 30%; width: 14px; height: 14px; transform: rotate(-8deg); color: #a8527a; }
+.about__scatter-mark--16 { top: 3%; left: 55%; width: 10px; height: 10px; transform: rotate(6deg); color: #3e6fa8; }
+.about__scatter-mark--17 { top: 12%; left: 20%; width: 13px; height: 13px; transform: rotate(-12deg); color: #5e693d; }
+.about__scatter-mark--18 { top: 90%; left: 70%; width: 11px; height: 11px; transform: rotate(10deg); color: #3e9b96; }
+.about__scatter-mark--19 { top: 5%; left: 88%; width: 15px; height: 15px; transform: rotate(-6deg); color: #a8527a; }
+
+@media (min-width: 1240px) {
+  .about__scatter {
+    display: block;
+  }
+}
+
+@media (min-width: 1600px) {
+  .about__scatter-mark--12,
+  .about__scatter-mark--13,
+  .about__scatter-mark--14,
+  .about__scatter-mark--15 {
+    display: block;
+  }
+}
+
+@media (min-width: 1920px) {
+  .about__scatter-mark--16,
+  .about__scatter-mark--17,
+  .about__scatter-mark--18,
+  .about__scatter-mark--19 {
+    display: block;
+  }
+}
+
+.about__inner {
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 2.8vw, 36px);
+}
+
+/* Echoes the four project accent colors (same order they appear in the
+   case studies above) right as the page enters About, so the palette
+   the reader just saw doesn't just vanish. */
+.about__palette {
+  display: flex;
+  gap: 10px;
+}
+
+.about__palette-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.about__palette-dot--teal { background: #3e9b96; }
+.about__palette-dot--blue { background: #3e6fa8; }
+.about__palette-dot--olive { background: #5e693d; }
+.about__palette-dot--mauve { background: #a8527a; }
+
+.about__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__row {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(38px, 4.6vw, 60px);
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(50px, 6vw, 76px);
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.about__contact {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 3.3vw, 42px);
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 3.3vw, 42px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-item__icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.contact-item__icon--wrapped {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-accent-tint);
+  border-radius: 20px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.contact-item__icon--wrapped img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.contact-item__link {
+  text-decoration: underline;
+  transition: color 0.25s ease;
+}
+
+.contact-item__link:hover,
+.contact-item__link:focus-visible {
+  color: var(--color-accent);
+}
+
+/* Phone number: a real tel: link (taps to call on mobile), but left
+   looking like plain text - no underline - matching the design. */
+.contact-item__tel {
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contact-item__tel:hover,
+.contact-item__tel:focus-visible {
+  color: var(--color-accent);
+}
+
+/* Email: click to copy instead of a link - it isn't one. */
+.contact-item__copy {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.contact-item__copy:hover,
+.contact-item__copy:focus-visible {
+  color: var(--color-accent);
+}
+
+.contact-item__copy.is-copied {
+  color: var(--color-accent);
+}
+
+.about__illustration {
+  width: 320px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .about__row {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(28px, 6vw, 45px);
+  }
+
+  .about__column {
+    width: 100%;
+  }
+
+  .about__illustration {
+    width: min(260px, 70%);
+  }
+}

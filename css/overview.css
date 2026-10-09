@@ -1,0 +1,144 @@
+.overview {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-text-light);
+  padding-block: clamp(70px, 8vw, 130px);
+}
+
+/* Carries the Hero/project-hero star-and-x background down through the
+   rest of the page. The card column is explicitly centered and
+   width-capped (max-width: var(--content-width)), so - unlike About's
+   full-bleed paragraph - the side margins here are reliably empty at
+   any height, and marks can run the full height of each section. */
+.overview__scatter {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.overview__scatter-mark {
+  position: absolute;
+  opacity: 0.5;
+  color: var(--color-accent);
+}
+
+.overview__scatter-mark--1 { top: 8%; left: 4%; width: 13px; height: 13px; transform: rotate(-7deg); }
+.overview__scatter-mark--2 { top: 25%; right: 5%; width: 10px; height: 10px; transform: rotate(11deg); color: var(--color-accent-dark); }
+.overview__scatter-mark--3 { top: 45%; left: 3%; width: 11px; height: 11px; transform: rotate(-10deg); }
+.overview__scatter-mark--4 { top: 62%; right: 4%; width: 14px; height: 14px; transform: rotate(9deg); color: var(--color-accent-dark); }
+.overview__scatter-mark--5 { top: 80%; left: 5%; width: 10px; height: 10px; transform: rotate(-13deg); }
+.overview__scatter-mark--6 { top: 92%; right: 3%; width: 12px; height: 12px; transform: rotate(8deg); }
+
+@media (min-width: 1240px) {
+  .overview__scatter {
+    display: block;
+  }
+}
+
+.overview__inner {
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 2.8vw, 36px);
+}
+
+.overview__heading {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.25vw, 16px);
+}
+
+.overview__heading img {
+  width: clamp(40px, 4.5vw, 58px);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.overview__body {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(44px, 5.2vw, 68px);
+}
+
+.overview__cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(44px, 5.2vw, 68px);
+}
+
+.overview-card {
+  background: var(--color-accent-tint-soft);
+  border-radius: 20px;
+  padding: clamp(34px, 4vw, 52px) clamp(32px, 3.6vw, 46px);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.overview-card__icon {
+  background: var(--color-accent-tint);
+  border-radius: 100px;
+  padding: 12px;
+  flex-shrink: 0;
+  display: flex;
+  /* Centers the icon badge on the card's title line specifically (not the
+     whole text column, which is taller once the list/paragraph is added
+     below it). */
+  margin-top: -17px;
+}
+
+.overview-card__icon img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.overview-card__content {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.text-card-title {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: var(--fs-intro);
+  letter-spacing: -0.05em;
+  color: var(--color-text);
+  margin: 0;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.overview-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.overview-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.overview-card__list li img {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  margin-top: 0.75em;
+}
+
+@media (max-width: 600px) {
+  .overview-card {
+    flex-direction: column;
+  }
+}

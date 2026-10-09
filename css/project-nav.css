@@ -1,0 +1,107 @@
+/* Footer navigation between case studies - links to the previous/next
+   project in the homepage's project order. The first project has no
+   --prev link and the last has no --next link; margin-left:auto on
+   --next keeps it pinned to the right edge whether or not --prev is
+   present, so a lone link never drifts to the left. */
+.project-nav {
+  padding-block: clamp(32px, 4vw, 56px);
+}
+
+.project-nav__inner {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 90px);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.project-nav__link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--color-text);
+  transition: color 0.25s ease;
+}
+
+.project-nav__link:hover,
+.project-nav__link:focus-visible {
+  color: var(--color-accent);
+}
+
+.project-nav__link--next {
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+/* First project has only --next, last project has only --prev - a lone
+   link should sit centered in the row instead of pinned to whichever
+   edge it would otherwise default to. */
+.project-nav__link:only-child {
+  margin-inline: auto;
+  align-items: center;
+  text-align: center;
+}
+
+/* The arrow pairs with the small eyebrow label (same line, same scale),
+   not with the bold title below - keeps the icon from "floating" between
+   two differently-weighted lines. */
+.project-nav__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-nav__label {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-light);
+}
+
+.project-nav__title {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: clamp(18px, 1.8vw, 22px);
+  letter-spacing: -0.03em;
+  color: inherit;
+}
+
+.project-nav__arrow {
+  width: 11px;
+  height: auto;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.project-nav__arrow--prev {
+  transform: scaleX(-1);
+}
+
+.project-nav__link--prev:hover .project-nav__arrow,
+.project-nav__link--prev:focus-visible .project-nav__arrow {
+  transform: scaleX(-1) translateX(-4px);
+}
+
+.project-nav__link--next:hover .project-nav__arrow,
+.project-nav__link--next:focus-visible .project-nav__arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .project-nav__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-nav__link--next {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .project-nav__link:only-child {
+    align-items: center;
+    text-align: center;
+  }
+}

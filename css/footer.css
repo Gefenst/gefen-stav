@@ -1,0 +1,53 @@
+.site-footer {
+  border-top: 1px solid #e7e9f2;
+  /* Large margin-top (not just padding) so the footer reads as a clearly
+     separate closing element, well clear of the project-nav links above
+     it rather than butting right up against them. */
+  margin-top: clamp(90px, 13vw, 180px);
+  padding-block: clamp(28px, 3.5vw, 40px);
+}
+
+.site-footer__inner {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 90px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icons are plain glyph-only SVGs pre-colored to match --color-text, the
+   same color the "Gefen Stav" logo text renders in - so the two sides of
+   the footer read as one consistent color, not a colored icon beside
+   dark text. Hover just lightens, since the fill color is baked into
+   each SVG file rather than driven by currentColor. */
+.site-footer__contact a {
+  display: inline-flex;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.site-footer__contact a:hover,
+.site-footer__contact a:focus-visible {
+  opacity: 0.6;
+}
+
+.site-footer__contact img {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 500px) {
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  --color-text: #484040;
+  --color-text-light: #ffffff;
+  --color-light: #999999;
+  /* Mauve/pink is the site's primary accent (matches the Hero CTA) -
+     used wherever an element isn't tied to one specific project's color.
+     Project pages override this locally via their .theme-* class. */
+  --color-accent: #a8527a;
+  --color-accent-dark: #83405f;
+  --color-accent-tint: #f5eaef;
+  --color-accent-tint-soft: #faf5f7;
+
+  --font-main: "Noto Sans", sans-serif;
+
+  --container-width: 1280px;
+  --content-width: 1046px;
+}
+
+/* Per-project accent themes - each project owns one signature color
+   (already set on its character's clothing and its hero line-dots), and
+   these classes carry that same color through the rest of that project's
+   page: eyebrow label, section icons, card icon badges, nav hover. Scoped
+   on <body> so the whole page picks it up while staying the same shared
+   system as every other project - only the color slot changes. */
+.theme-teal {
+  --color-accent: #3e9b96;
+  --color-accent-dark: #307975;
+  --color-accent-tint: #e8f3f2;
+  --color-accent-tint-soft: #f3f9f9;
+}
+
+.theme-blue {
+  --color-accent: #3e6fa8;
+  --color-accent-dark: #305783;
+  --color-accent-tint: #e8eef5;
+  --color-accent-tint-soft: #f3f6fa;
+}
+
+.theme-mauve {
+  --color-accent: #a8527a;
+  --color-accent-dark: #83405f;
+  --color-accent-tint: #f5eaef;
+  --color-accent-tint-soft: #faf5f7;
+}
+
+.theme-olive {
+  --color-accent: #5e693d;
+  --color-accent-dark: #495230;
+  --color-accent-tint: #ecede8;
+  --color-accent-tint-soft: #f5f6f3;
+}

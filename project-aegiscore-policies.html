@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AegisCore Policies — Gefen Stav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/project-hero.css" />
+  <link rel="stylesheet" href="css/overview.css" />
+  <link rel="stylesheet" href="css/research.css" />
+  <link rel="stylesheet" href="css/design.css" />
+  <link rel="stylesheet" href="css/project-nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body class="theme-olive">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html#projects" class="back-link">
+        <img src="assets/icons/projects/arrow-dark.svg" alt="" class="back-link__icon" />
+        Back
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Project sections">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#persona" class="nav-link">Persona</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#design" class="nav-link">Design</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="project-hero project-hero--framed project-hero--reversed" id="top">
+    <div class="project-hero__doodles" aria-hidden="true">
+      <div class="project-hero__doodle-card project-hero__doodle-card--a">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 19c-9 0-16 7-16 15 0 6 3 10 7 13 2 2 3 4 3 7h12c0-3 1-5 3-7 4-3 7-7 7-13 0-8-7-15-16-15z" />
+          <path d="M26 50h12" /><path d="M27.5 56h9" />
+          <path d="M12 2Q12 8 18 8Q12 8 12 14Q12 8 6 8Q12 8 12 2Z" />
+          <path d="M50 2Q50 6 54 6Q50 6 50 10Q50 6 46 6Q50 6 50 2Z" />
+        </svg>
+      </div>
+      <div class="project-hero__doodle-card project-hero__doodle-card--b">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 58V8" /><path d="M4 15l6-7 6 7" /><path d="M10 58h44" /><path d="M51 52l7 6-7 6" />
+          <path d="M14 46c6-4 10 6 16 2s2-14 10-10 6 10 14 4" />
+          <path d="M44 25.5l4.5-3" /><path d="M48.5 21l4.5-3" />
+        </svg>
+      </div>
+      <div class="project-hero__doodle-card project-hero__doodle-card--c">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 58L36 32" />
+          <path d="M46 11Q46 22 57 22Q46 22 46 33Q46 22 35 22Q46 22 46 11Z" />
+          <path d="M55 1Q55 6 60 6Q55 6 55 11Q55 6 50 6Q55 6 55 1Z" />
+          <path d="M33 2Q33 6 37 6Q33 6 33 10Q33 6 29 6Q33 6 33 2Z" />
+        </svg>
+      </div>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+    </div>
+    <div class="project-hero__inner">
+      <div class="project-hero__content">
+        <div class="project-hero__text-block">
+        <div class="project-hero__heading">
+          <h1 class="text-title text-title--word project-hero__title">Policies</h1>
+        </div>
+        <p class="text-body-lg project-hero__subtitle">Responsabilities: UX, Research</p>
+      </div>
+      <div class="project-hero__line-row">
+        <img class="project-hero__decor-line" src="assets/icons/project-hero/line-dots-policies.svg" alt="" aria-hidden="true" />
+        <img
+          class="project-hero__character"
+          src="assets/images/project-hero/character-sitting-policies.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+      </div>
+      <div class="project-hero__graphic" style="margin-top: -10px;">
+        <img
+          class="project-hero__graphic-img"
+          src="assets/images/project-hero/aegiscore-ui-policies-v3.png"
+          alt="AegisCore automated policy interface, showing the High-Risk Production Assets Monitor panel"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="overview">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/overview/icon-overview-olive.svg" alt="" />
+        <h2 class="text-section-title">Overview</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          This project focuses on improving the experience of creating
+          security policies within a cloud security platform that provides
+          visibility and control over cloud environments. Creating policies
+          is often a complex and technical process, requiring users to
+          define rules, conditions, and scopes while aligning with security
+          standards. This complexity can make the process time consuming
+          and error prone. The goal is to simplify policy creation through
+          a clear, guided flow that reduces cognitive load and enables
+          users to create accurate, effective policies with confidence.
+        </p>
+        <div class="overview__cards">
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-olive.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">The Problem:</p>
+              <p class="text-intro">
+                Creating security policies is a complex and technical
+                process. Users are required to define multiple elements
+                such as rules, conditions, and scopes making it difficult
+                to navigate and understand. Without a clear and intuitive
+                structure, the process can feel overwhelming and hard to
+                manage.
+              </p>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-new-olive.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Pain Points:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">High cognitive load due to multiple parameters and configurations</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Lack of guidance during the creation process</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Policies that are not precise enough, resulting in too many irrelevant issues</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-olive.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Our Goals:</p>
+              <p class="text-intro">
+                To simplify and streamline the policy creation process by
+                providing a guided, structured experience that improves
+                clarity and enables users to create effective policies
+                with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="persona">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/persona/icon-user-olive.svg" alt="" />
+        <h2 class="text-section-title">Persona</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          Noa is a cloud security engineer responsible for managing
+          security policies across multi-cloud environments. She needs a
+          clear, structured way to define complex rules and conditions,
+          understand policy logic, and reduce unnecessary noise.
+        </p>
+        <div class="overview__cards">
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-olive.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Frustrations:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Creating policies feels complex and overwhelming due to too many parameters and configurations</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Difficulty understanding how different rules and conditions affect the final outcome</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Policies often generate too many irrelevant issues, creating noise and reducing trust in the results</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/persona/icon-lightbulb-olive.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Needs:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">A clear and structured flow for creating policies step by step</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Better visibility and understanding of how the policy logic works and what it will return</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">The ability to create precise policies that surface relevant issues without noise</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="research">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/research/icon-search-olive.svg" alt="" />
+        <h2 class="text-section-title">Research</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          I conducted a competitive analysis of platforms that support
+          complex rule and policy creation to understand how they simplify
+          configuration and reduce user error. I found that guided, step
+          by step flows and modular rule building patterns make complex
+          setups more intuitive and easier to manage. Additionally,
+          providing real time feedback and clear visibility into the
+          policy logic and expected outcomes helps users better understand
+          their configurations, reduce noise, and build more accurate and
+          effective policies.
+        </p>
+        <div class="research__findings">
+          <p class="text-subhead">Research Findings</p>
+          <div class="overview__cards">
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Guided, step based creation</p>
+                <p class="text-intro">
+                  Breaks down complex policy setup into clear, manageable
+                  steps, reducing cognitive load and making the process
+                  more approachable.
+                </p>
+              </div>
+              <div class="research-card__thumb research-card__thumb--fit" style="aspect-ratio: 2784 / 1492;">
+                <img src="assets/images/research/guided-step-creation.png" alt="Reference screenshot of a guided, step based creation flow" />
+              </div>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Modular rule building</p>
+                <p class="text-intro">
+                  Separating rules, conditions, and scope improves clarity,
+                  helping users better understand and control policy logic.
+                </p>
+              </div>
+              <div class="research-card__thumb research-card__thumb--fit" style="aspect-ratio: 814 / 472;">
+                <img src="assets/images/research/modular-rule-building.png" alt="Reference screenshot of modular rule building" />
+              </div>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Outcome visibility &amp; feedback</p>
+                <p class="text-intro">
+                  Providing previews or real time feedback helps users
+                  understand the impact of their policy, enabling more
+                  precise configurations and reducing noise in results.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="design">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/research/icon-search-olive.svg" alt="" />
+        <h2 class="text-section-title">Design</h2>
+      </div>
+      <div class="overview__body">
+        <div class="research__findings">
+          <p class="text-subhead">Ideation &amp; Wireframing</p>
+          <p class="text-intro">
+            Based on user needs and competitive research, I created mid- to
+            high-fidelity mockups for the policy creation flow. The design
+            simplifies a complex process by separating rules, conditions,
+            and scope into a clear, guided experience. The solution
+            improves visibility into policy logic and outcomes, helping
+            users create more precise policies while reducing cognitive
+            load and unnecessary noise.
+          </p>
+        </div>
+
+        <div class="overview__cards">
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Policy Creation</p>
+              <p class="text-intro">
+                The first design focused on creating a new policy, aiming
+                to simplify a complex process while keeping it flexible
+                and scalable for future additions. A key challenge was
+                structuring the condition building flow. I explored both a
+                flat, chip-based layout and a grouped approach. While the
+                chip based option felt lighter, it didn't clearly support
+                complex logic. I chose a structured grouping model, where
+                conditions are organized into groups and nested groups.
+                This allows users to build more complex logic while
+                maintaining clarity. Clear visual separation and
+                contextual actions within each group help users understand
+                where conditions are added and how the logic is
+                constructed, supporting a more intuitive and controlled
+                experience.
+              </p>
+            </div>
+            <div class="design-card__illustration">
+              <img src="assets/images/design/policy-creation-illustration.png" alt="Illustration of the Policy Creation design exploration, comparing a flat chip-based layout with a structured grouping model" />
+            </div>
+          </div>
+        </div>
+
+        <div class="research__findings">
+          <p class="text-subhead">Final Design</p>
+          <div class="design__final-shots">
+            <img src="assets/images/design/final-design-list-view.png" alt="Final design of the automated policies list view" />
+            <img src="assets/images/design/final-design-detail-panel.png" alt="Final design of a policy's detail panel" />
+            <img src="assets/images/design/final-design-new-policy.png" alt="Final design of the new policy creation form" />
+            <img src="assets/images/design/final-design-risk-form-1.png" alt="Final design of the High-Risk Production Assets Monitor policy, basic configuration" />
+            <img src="assets/images/design/final-design-risk-form-2.png" alt="Final design of the High-Risk Production Assets Monitor policy, with expanded results" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <div class="project-nav__inner">
+      <a href="project-venus-integrations.html" class="project-nav__link project-nav__link--prev">
+        <span class="project-nav__eyebrow">
+          <img src="assets/icons/projects/arrow-light.svg" alt="" class="project-nav__arrow project-nav__arrow--prev" />
+          <span class="project-nav__label">Previous Project</span>
+        </span>
+        <span class="project-nav__title">Venus Integrations</span>
+      </a>
+      <a href="project-copilot-chat.html" class="project-nav__link project-nav__link--next">
+        <span class="project-nav__eyebrow">
+          <span class="project-nav__label">Next Project</span>
+          <img src="assets/icons/projects/arrow-light.svg" alt="" class="project-nav__arrow" />
+        </span>
+        <span class="project-nav__title">Copilot Chat</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a href="index.html#top" class="logo-link">
+        <p class="logo-text">Gefen Stav</p>
+      </a>
+      <div class="site-footer__contact">
+        <a href="mailto:gefenstav@gmail.com" aria-label="Email Gefen Stav">
+          <img src="assets/icons/footer/icon-email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/gefen-stav/" target="_blank" rel="noopener" aria-label="Gefen Stav on LinkedIn">
+          <img src="assets/icons/footer/icon-linkedin.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

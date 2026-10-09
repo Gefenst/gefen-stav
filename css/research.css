@@ -1,0 +1,69 @@
+.research__findings {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(36px, 4.2vw, 56px);
+  width: 100%;
+}
+
+.research-card {
+  background: var(--color-accent-tint-soft);
+  border-radius: 20px;
+  padding: clamp(34px, 4vw, 52px) clamp(32px, 3.6vw, 46px);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.research-card__content {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.research-card__thumb {
+  border: 1px solid #e7e9f2;
+  border-radius: 4px;
+  width: clamp(90px, 10.8vw, 138px);
+  height: clamp(90px, 10.8vw, 138px);
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.6s ease, box-shadow 0.6s ease, z-index 0s;
+}
+
+.research-card__thumb:hover,
+.research-card__thumb:focus-visible {
+  transform: scale(1.8);
+  z-index: 5;
+  box-shadow: 0 16px 40px rgba(72, 64, 64, 0.22);
+}
+
+.research-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Wider reference screenshots (vs. the small square icon-style thumbs
+   above): sized to the image's own aspect ratio so object-fit:cover never
+   has to crop into the actual content being referenced. */
+.research-card__thumb--fit {
+  width: clamp(160px, 30vw, 320px);
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .research-card {
+    flex-direction: column;
+  }
+
+  .research-card__thumb {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}

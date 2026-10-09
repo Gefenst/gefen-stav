@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venus Integrations — Gefen Stav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/project-hero.css" />
+  <link rel="stylesheet" href="css/overview.css" />
+  <link rel="stylesheet" href="css/research.css" />
+  <link rel="stylesheet" href="css/design.css" />
+  <link rel="stylesheet" href="css/project-nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body class="theme-blue">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html#projects" class="back-link">
+        <img src="assets/icons/projects/arrow-dark.svg" alt="" class="back-link__icon" />
+        Back
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Project sections">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#persona" class="nav-link">Persona</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#design" class="nav-link">Design</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="project-hero project-hero--reversed" id="top">
+    <div class="project-hero__doodles" aria-hidden="true">
+      <div class="project-hero__doodle-card project-hero__doodle-card--a">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 19c-9 0-16 7-16 15 0 6 3 10 7 13 2 2 3 4 3 7h12c0-3 1-5 3-7 4-3 7-7 7-13 0-8-7-15-16-15z" />
+          <path d="M26 50h12" /><path d="M27.5 56h9" />
+          <path d="M12 2Q12 8 18 8Q12 8 12 14Q12 8 6 8Q12 8 12 2Z" />
+          <path d="M50 2Q50 6 54 6Q50 6 50 10Q50 6 46 6Q50 6 50 2Z" />
+        </svg>
+      </div>
+      <div class="project-hero__doodle-card project-hero__doodle-card--b">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 58V8" /><path d="M4 15l6-7 6 7" /><path d="M10 58h44" /><path d="M51 52l7 6-7 6" />
+          <path d="M14 46c6-4 10 6 16 2s2-14 10-10 6 10 14 4" />
+          <path d="M44 25.5l4.5-3" /><path d="M48.5 21l4.5-3" />
+        </svg>
+      </div>
+      <div class="project-hero__doodle-card project-hero__doodle-card--c">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 58L36 32" />
+          <path d="M46 11Q46 22 57 22Q46 22 46 33Q46 22 35 22Q46 22 46 11Z" />
+          <path d="M55 1Q55 6 60 6Q55 6 55 11Q55 6 50 6Q55 6 55 1Z" />
+          <path d="M33 2Q33 6 37 6Q33 6 33 10Q33 6 29 6Q33 6 33 2Z" />
+        </svg>
+      </div>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+    </div>
+    <div class="project-hero__inner">
+      <div class="project-hero__content">
+        <div class="project-hero__text-block">
+        <div class="project-hero__heading">
+          <p class="text-greeting project-hero__eyebrow">Venus</p>
+          <h1 class="text-title text-title--word project-hero__title">Integrations</h1>
+        </div>
+        <p class="text-body-lg project-hero__subtitle">Responsabilities: UX, Research</p>
+      </div>
+      <div class="project-hero__line-row">
+        <img class="project-hero__decor-line" src="assets/icons/project-hero/line-dots-integrations.svg" alt="" aria-hidden="true" />
+        <img
+          class="project-hero__character"
+          src="assets/images/project-hero/character-sitting-integrations.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+      </div>
+      <div class="project-hero__graphic" style="width: clamp(300px, 62.5vw, 800px); aspect-ratio: 1600 / 1000;">
+        <img
+          class="project-hero__graphic-img"
+          src="assets/images/project-hero/integrations - for hero.png"
+          alt="Laptop mockup of the Venus Integrations catalog"
+        />
+        <img
+          class="project-hero__character project-hero__character--mobile"
+          src="assets/images/project-hero/character-sitting-integrations.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="overview">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/overview/icon-overview-blue.svg" alt="" />
+        <h2 class="text-section-title">Overview</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          Venus is a cybersecurity platform that identifies and prioritizes
+          exposures and misconfigurations across cloud and on-prem
+          environments, aligned with business priorities. Its integrations
+          page is part of a comprehensive integrations experience, including
+          a catalog and a full flow that allows users to easily discover,
+          configure, and manage integrations in one place.
+        </p>
+        <div class="overview__cards">
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-blue.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">The Problem:</p>
+              <p class="text-intro">
+                In complex cybersecurity platforms, integrations are
+                essential for connecting systems and maximizing value, but
+                the experience of discovering, understanding, and managing
+                them is often fragmented and unintuitive. Users struggle to
+                find relevant integrations, evaluate their suitability, and
+                manage multiple instances effectively, resulting in friction
+                and underutilization.
+              </p>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-new-blue.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Pain Points:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Users need to quickly find relevant integrations and decide whether to connect</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Supporting multiple integrations per platform creates challenges in both discovery and management</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Creating a fast and intuitive integration experience despite the inherent complexity and information overload</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-blue.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Our Goals:</p>
+              <p class="text-intro">
+                Enable users to easily manage, discover, and connect
+                integrations, including multiple instances per platform,
+                through a clear and intuitive experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="persona">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/persona/icon-user-blue.svg" alt="" />
+        <h2 class="text-section-title">Persona</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          Ron is a senior security analyst who investigates threats and
+          manages multiple integrations. He needs clear visibility into
+          integration functionality and status, with a fast, simple setup
+          and management experience.
+        </p>
+        <div class="overview__cards">
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-blue.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Frustrations:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Confusion when managing multiple instances of the same integration</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Difficulty finding relevant integrations quickly due to poor search and filtering</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Integration setup is time consuming and lacks clarity</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/persona/icon-lightbulb-blue.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Needs:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">A clear and centralized view of all integrations, including their status</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Quick and efficient search and filtering to find relevant integrations</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">A simple, intuitive, and fast integration setup and management experience</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="research">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/research/icon-search-blue.svg" alt="" />
+        <h2 class="text-section-title">Research</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          I conducted a competitive analysis of platforms with integrations
+          focused pages to understand how discovery and management
+          experiences are structured and prioritized. Combined with insights
+          from the PM, this research helped define what information users
+          need at different stages, when exploring new integrations versus
+          managing existing ones, and highlighted patterns for creating a
+          more intuitive, scalable, and user friendly experience.
+        </p>
+        <div class="research__findings">
+          <p class="text-subhead">Research Findings</p>
+          <div class="overview__cards">
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Advanced search &amp; filtering</p>
+                <p class="text-intro">
+                  Providing robust filtering capabilities combined with
+                  helpful textual guidance to support users in quickly
+                  finding relevant integrations.
+                </p>
+              </div>
+              <div class="research-card__thumb research-card__thumb--fit" style="aspect-ratio: 2848 / 1430;">
+                <img src="assets/images/research/search-filtering.png" alt="Reference screenshot of advanced search and filtering" />
+              </div>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Embedded guidance in setup flows</p>
+                <p class="text-intro">
+                  Integrating clear, step by step instructions within the
+                  integration process to help users understand what actions
+                  are required and reduce friction.
+                </p>
+              </div>
+              <div class="research-card__thumb research-card__thumb--fit" style="aspect-ratio: 1566 / 1106;">
+                <img src="assets/images/research/setup-guidance.png" alt="Reference screenshot of embedded setup guidance" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="design">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/research/icon-search-blue.svg" alt="" />
+        <h2 class="text-section-title">Design</h2>
+      </div>
+      <div class="overview__body">
+        <div class="research__findings">
+          <p class="text-subhead">Ideation &amp; Wireframing</p>
+          <p class="text-intro">
+            Based on the persona's needs, key problems, and competitive
+            research, I created mid- to high-fidelity mockups for the
+            integrations experience. I separated the flow into two dedicated
+            screens: one for discovering new integrations and another for
+            managing existing ones, while keeping the experience consistent
+            across both. The design focuses on clear information hierarchy,
+            easier evaluation and setup, and support for managing multiple
+            integration instances, while reducing cognitive load and
+            creating a scalable, intuitive experience.
+          </p>
+        </div>
+
+        <div class="overview__cards">
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Integrations Catalog</p>
+              <p class="text-intro">
+                During wireframing, we explored whether the Connect action
+                should appear directly on each integration card or only
+                within the expanded view. To reduce friction and support
+                quick decision-making, the final design places key
+                integration details and the Connect action directly on the
+                card, while keeping additional information available when
+                needed. Search and filters are kept easily accessible at the
+                top of the page. To prevent users from unintentionally
+                narrowing results too much, contextual hints notify them
+                when active filters or search terms may be hiding relevant
+                integrations.
+              </p>
+            </div>
+            <div class="design-card__illustration design-card__illustration--narrow">
+              <img src="assets/images/design/catalog-illustration.svg" alt="Illustration of the Integrations Catalog design exploration" />
+            </div>
+          </div>
+
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Managing Integrations</p>
+              <p class="text-intro">
+                The managing integrations view gives users a centralized
+                overview of connected instances, statuses, and capabilities.
+                During the design process, we explored different sorting
+                methods and chose flexible sorting, with Most Recent as the
+                default. To reduce clutter, management actions were moved
+                from the cards to a dedicated side panel, keeping the main
+                view clean and easy to scan.
+              </p>
+            </div>
+            <div class="design-card__illustration">
+              <img src="assets/images/design/managing-illustration.svg" alt="Illustration of the Managing Integrations design exploration" />
+            </div>
+          </div>
+
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Integration Setup</p>
+              <p class="text-intro">
+                The setup flow guides users through the connection step by
+                step. Instead of relying on external instructions,
+                contextual guidance is embedded within each relevant step,
+                reducing cognitive load and keeping users focused.
+                Instructions can be expanded or collapsed as needed,
+                providing support without cluttering the interface.
+              </p>
+            </div>
+            <div class="design-card__illustration design-card__illustration--narrow">
+              <img src="assets/images/design/setup-illustration.svg" alt="Illustration of the Integration Setup design exploration" />
+            </div>
+          </div>
+        </div>
+
+        <div class="research__findings">
+          <p class="text-subhead">Final Design</p>
+          <div class="design__final-shots">
+            <img src="assets/images/design/final-design-catalog-grid.png" alt="Final design of the Integrations Catalog grid view" />
+            <img src="assets/images/design/final-design-catalog-vendor-filter.png" alt="Final design of the vendor filter dropdown in the Catalog view" />
+            <img src="assets/images/design/final-design-search-catalog-filters.png" alt="Final design of search and filtering within the Catalog tab" />
+            <img src="assets/images/design/final-design-search-my-integrations-filters.png" alt="Final design of search and filtering within the My Integrations tab" />
+            <img src="assets/images/design/final-design-managing-list.png" alt="Final design of the Managing Integrations list view" />
+            <img src="assets/images/design/final-design-managing-health-detail.png" alt="Final design of an integration's health detail tooltip in the Managing Integrations view" />
+            <img src="assets/images/design/final-design-setup.png" alt="Final design of the Integration Setup flow" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <div class="project-nav__inner">
+      <a href="project-venus-indicators.html" class="project-nav__link project-nav__link--prev">
+        <span class="project-nav__eyebrow">
+          <img src="assets/icons/projects/arrow-light.svg" alt="" class="project-nav__arrow project-nav__arrow--prev" />
+          <span class="project-nav__label">Previous Project</span>
+        </span>
+        <span class="project-nav__title">Venus Indicators</span>
+      </a>
+      <a href="project-aegiscore-policies.html" class="project-nav__link project-nav__link--next">
+        <span class="project-nav__eyebrow">
+          <span class="project-nav__label">Next Project</span>
+          <img src="assets/icons/projects/arrow-light.svg" alt="" class="project-nav__arrow" />
+        </span>
+        <span class="project-nav__title">AegisCore Policies</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a href="index.html#top" class="logo-link">
+        <p class="logo-text">Gefen Stav</p>
+      </a>
+      <div class="site-footer__contact">
+        <a href="mailto:gefenstav@gmail.com" aria-label="Email Gefen Stav">
+          <img src="assets/icons/footer/icon-email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/gefen-stav/" target="_blank" rel="noopener" aria-label="Gefen Stav on LinkedIn">
+          <img src="assets/icons/footer/icon-linkedin.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

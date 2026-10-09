@@ -1,0 +1,148 @@
+:root {
+  /* Fluid type scale - scales smoothly between mobile and the 1280px desktop baseline */
+  --fs-display-greeting: clamp(22px, 1.1vw + 16px, 40px);
+  --fs-display-title: clamp(26px, 6.25vw, 80px);
+  --fs-body-lg: clamp(17px, 0.6vw + 13px, 24px);
+  --fs-body: clamp(16px, 0.3vw + 14px, 18px);
+  --fs-logo: clamp(17px, 0.3vw + 15px, 20px);
+  --fs-nav-link: clamp(16px, 0.3vw + 14px, 20px);
+  --fs-section-title: clamp(32px, 3.75vw, 48px);
+  --fs-intro: clamp(16px, 1.56vw, 20px);
+  --fs-subhead: clamp(20px, 2.03vw, 26px);
+  --fs-contact: 16px;
+}
+
+.text-greeting {
+  font-family: var(--font-main);
+  font-weight: 300;
+  font-size: var(--fs-display-greeting);
+  letter-spacing: 0.04em;
+  color: var(--color-light);
+  text-align: center;
+  line-height: 1.15;
+  margin: 0;
+  /* Trims the line box down to the glyphs themselves (cap-height to
+     alphabetic baseline) - without this, normal line-height adds invisible
+     padding above/below the text that makes flex `gap` look bigger than
+     the value we actually set. Chrome/Edge support it; older browsers
+     just fall back to the line-height above. */
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.text-title {
+  font-family: var(--font-main);
+  font-weight: 900;
+  font-size: var(--fs-display-title);
+  color: var(--color-text);
+  line-height: 1;
+  margin: 0;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.text-title span:first-child {
+  text-transform: lowercase;
+  letter-spacing: -0.09em;
+}
+
+.text-title span:last-child {
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+}
+
+/* A single-word title (no "a" prefix span) - same weight/size as
+   .text-title, just uppercase + tight tracking applied directly.
+   overflow-wrap is a safety net, not a style choice: the word's own
+   length varies per project ("INTEGRATIONS" vs "INDICATORS"), and at
+   some viewport widths a longer word outgrows its fixed-width column
+   before the font-size clamp shrinks enough to compensate. It only
+   engages when the word would otherwise overflow and get clipped by
+   the hero section's overflow:hidden. */
+.text-title--word {
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+  overflow-wrap: anywhere;
+}
+
+.text-body-lg {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--fs-body-lg);
+  color: var(--color-text);
+  line-height: 1.65;
+  text-align: center;
+  margin: 0;
+}
+
+.text-body {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.logo-text {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: var(--fs-logo);
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+  margin: 0;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.nav-link {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--fs-nav-link);
+  color: var(--color-text);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.text-section-title {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: var(--fs-section-title);
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin: 0;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.text-intro {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-intro);
+  line-height: 1.65;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.text-intro strong {
+  font-weight: 600;
+}
+
+.text-subhead {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: var(--fs-subhead);
+  letter-spacing: -0.05em;
+  line-height: 1.3;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.text-contact {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--fs-contact);
+  color: var(--color-text);
+  margin: 0;
+}

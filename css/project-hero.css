@@ -1,0 +1,373 @@
+/* Back-to-home link, replacing the logo in the header on project pages */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-nav-link);
+  color: var(--color-text);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+  transition: color 0.25s ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--color-accent);
+}
+
+.back-link__icon {
+  width: 14px;
+  height: auto;
+  transform: scaleX(-1);
+  transition: transform 0.25s ease;
+}
+
+.back-link:hover .back-link__icon,
+.back-link:focus-visible .back-link__icon {
+  transform: scaleX(-1) translateX(4px);
+}
+
+.project-hero {
+  position: relative;
+  background: var(--color-text-light);
+  padding-block: clamp(40px, 6.09vw, 78px);
+  overflow: hidden;
+}
+
+/* Same cushion-icon + star/x scatter treatment as the home Hero, but
+   tuned to this page's own single theme color (var(--color-accent) and
+   its tint/dark) instead of all four project colors - this page is
+   about one project, not a preview of all of them. Sits behind the
+   grid content (z-index 0 vs. the inner's 1). */
+.project-hero__doodles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.project-hero__doodle-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24%;
+  opacity: 0.6;
+}
+
+.project-hero__doodle-icon {
+  width: 58%;
+  height: 58%;
+}
+
+/* Three cards, all in the text/character column - matches the
+   reference: one above the headline, two below the line-row either
+   side of the character - none sit over the graphic itself. */
+.project-hero__doodle-card--a { top: 9%; left: 29%; width: 48px; height: 48px; background: var(--color-accent-tint); color: var(--color-accent); transform: rotate(-9deg); }
+.project-hero__doodle-card--b { top: 78%; left: 43%; width: 44px; height: 44px; background: var(--color-accent-tint-soft); color: var(--color-accent-dark); transform: rotate(8deg); }
+.project-hero__doodle-card--c { top: 74%; left: 7%; width: 50px; height: 50px; background: var(--color-accent-tint-soft); color: var(--color-accent-dark); transform: rotate(-14deg); }
+
+.project-hero__scatter-mark {
+  position: absolute;
+  opacity: 0.5;
+  color: var(--color-accent);
+}
+
+.project-hero__scatter-mark--1 { top: 4%; left: 4%; width: 12px; height: 12px; transform: rotate(-8deg); }
+.project-hero__scatter-mark--2 { top: 32%; left: 2%; width: 10px; height: 10px; transform: rotate(10deg); color: var(--color-accent-dark); }
+.project-hero__scatter-mark--3 { top: 48%; left: 48%; width: 11px; height: 11px; transform: rotate(-6deg); }
+.project-hero__scatter-mark--4 { top: 85%; left: 42%; width: 13px; height: 13px; transform: rotate(9deg); color: var(--color-accent-dark); }
+.project-hero__scatter-mark--5 { top: 2%; left: 85%; width: 10px; height: 10px; transform: rotate(-11deg); }
+
+/* Reversed pages mirror the grid (graphic left, text right) - and the
+   graphic's bleed moves to the left edge with it - so every mark's
+   horizontal position flips too, same distance from the opposite edge. */
+.project-hero--reversed .project-hero__doodle-card--a { left: auto; right: 29%; }
+.project-hero--reversed .project-hero__doodle-card--b { left: auto; right: 43%; }
+.project-hero--reversed .project-hero__doodle-card--c { left: auto; right: 7%; }
+.project-hero--reversed .project-hero__scatter-mark--1 { left: auto; right: 4%; }
+.project-hero--reversed .project-hero__scatter-mark--2 { left: auto; right: 2%; }
+.project-hero--reversed .project-hero__scatter-mark--3 { left: auto; right: 48%; }
+.project-hero--reversed .project-hero__scatter-mark--4 { left: auto; right: 42%; }
+.project-hero--reversed .project-hero__scatter-mark--5 { left: auto; right: 85%; }
+
+@media (min-width: 1240px) {
+  .project-hero__doodles {
+    display: block;
+  }
+}
+
+.project-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-left: clamp(20px, 7.5vw, 96px);
+  padding-right: clamp(0px, 1vw, 12px);
+  display: grid;
+  /* minmax(0, 1fr), not bare 1fr: a bare 1fr track's implicit automatic
+     minimum is "auto", which lets it refuse to shrink below the
+     graphic's preferred width (its `width` clamp) and blow out the
+     grid's total width past the container on narrower viewports. */
+  grid-template-columns: clamp(300px, 43.2vw, 553px) minmax(0, 1fr);
+  /* ONE row, not two: "content" (text-block + line-row stacked inside
+     their own wrapper) sits beside "graphic" in a single grid row, so
+     the row's height is simply max(content's natural height, graphic's
+     height) - plain CSS grid row sizing, no multi-row-span distribution
+     quirks. */
+  grid-template-areas: "content graphic";
+  /* Content (text+line) is vertically centered against the graphic,
+     not pinned to its top - when the graphic is taller, the shorter
+     content column floats centered within that row instead of
+     hugging its top edge. */
+  align-items: center;
+  column-gap: clamp(16px, 2.4vw, 31px);
+}
+
+.project-hero__content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  /* 0px between the subtitle and the line-row, per Figma - the heading-
+     to-subtitle 90px gap lives inside .project-hero__text-block's own
+     `gap` instead, so it's unaffected by this. */
+  gap: 0;
+}
+
+/* Mirrored variant: graphic on the left, text on the right. Scoped to a
+   modifier class so other project pages keep the default text-left
+   layout. */
+.project-hero--reversed .project-hero__inner {
+  grid-template-columns: minmax(0, 1fr) clamp(300px, 43.2vw, 553px);
+  grid-template-areas: "graphic content";
+  padding-left: clamp(0px, 1vw, 12px);
+  padding-right: clamp(20px, 7.5vw, 96px);
+}
+
+.project-hero__text-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 7vw, 90px);
+}
+
+.project-hero__heading {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2.34vw, 30px);
+}
+
+.project-hero__eyebrow {
+  text-align: left;
+  color: var(--color-accent);
+}
+
+.project-hero__title {
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+}
+
+.project-hero__subtitle {
+  text-align: left;
+}
+
+.project-hero__graphic {
+  grid-area: graphic;
+  position: relative;
+  /* Centers the (now-shrunk) image within the box's full original
+     footprint, so the box itself keeps reserving the same row height
+     it always did - only the visible image gets smaller, leaving real
+     margin around it for the glow to spread into without the section's
+     overflow:hidden clipping it. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* This is wider than its own 1fr grid track BY DESIGN - confirmed
+     straight from Figma's node coordinates: at the 1280px reference
+     frame, the laptop (701px) bleeds 91px past even the frame's own
+     left edge, well past its ~610px track. Matching that ratio means
+     letting it overflow the track; the section's overflow:hidden keeps
+     that overflow from ever becoming a page-level horizontal scrollbar,
+     it only ever clips visually, and only on viewports narrow enough
+     that there's no spare margin outside the 1280px inner container to
+     bleed into (reproducible on the Indicators page too - this is the
+     same tension that already existed there). */
+  width: clamp(200px, 54.38vw, 696px);
+  aspect-ratio: 1449 / 933;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+/* Some projects' hero graphic is a bordered screenshot frame rather
+   than the laptop mockup - visibly a different (taller) shape, so
+   object-fit:contain inside the laptop's aspect-ratio box would
+   letterbox it. Scoped per-project since the laptop ratio is still
+   correct for the others. Width is also its own value (not the shared
+   54.38vw/696px): at the 1280px reference this graphic is 839px wide
+   (65.56vw) - a noticeably bigger share of the hero than the laptop
+   mockup gets in the other projects' heroes. */
+.project-hero--framed .project-hero__graphic {
+  width: clamp(200px, 65.56vw, 839px);
+  aspect-ratio: 2408 / 1320;
+}
+
+/* This hero's own column-gap: at the 1280px reference, Figma has the
+   graphic's visible right edge at x=580 and the text column starting
+   at x=640 - a 60px gap (4.69vw), not the shared 31px (2.4vw) the
+   laptop-mockup heroes use. The bigger, bleeding graphic above means
+   less of that 60px is "inside" the grid track to begin with, so
+   reusing the smaller shared gap read as the text crowding the image. */
+.project-hero--framed .project-hero__inner {
+  column-gap: clamp(20px, 4.69vw, 60px);
+  /* Figma's text column right-edge sits 87px (6.8vw) from the frame
+     edge here, not the shared 96px (7.5vw). */
+  padding-right: clamp(20px, 6.8vw, 87px);
+}
+
+/* Mirrored variant has graphic in the FIRST column, so an end-aligned
+   overflow would bleed rightward into the text column instead of the
+   outer edge. justify-self: end flips which side absorbs the bleed,
+   matching the default template's own text-right/graphic-left bleed
+   direction (toward the page's outer edge, not the text). */
+.project-hero--reversed .project-hero__graphic {
+  justify-self: end;
+}
+
+.project-hero__graphic-img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 2;
+  /* Soft glow in the page's own theme color (var(--color-accent)
+     already resolves per-project - teal/blue/olive/mauve) instead of a
+     generic neutral drop shadow. */
+  filter: drop-shadow(0 14px 38px color-mix(in srgb, var(--color-accent) 22%, transparent));
+}
+
+
+/* Sized to fully contain the character (not just the thin line), so her
+   height is reserved in the layout's own rhythm instead of floating
+   outside it as absolute-positioned overflow. */
+.project-hero__line-row {
+  position: relative;
+  width: clamp(220px, 43.2vw, 553px);
+  height: clamp(86px, 12.45vw, 160px);
+}
+
+.project-hero__character {
+  position: absolute;
+  right: 21%;
+  bottom: 0;
+  width: clamp(55px, 7.97vw, 102px);
+  height: auto;
+  z-index: 2;
+}
+
+.project-hero__decor-line {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 28.2%;
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile has its own character placement (sitting at the same height as
+   the subtitle text, overlapping down onto the laptop below) - this
+   second instance stays hidden until the mobile breakpoint, while the
+   line-sitting instance above is hidden there instead. Position is
+   computed from the Figma mobile reference: she sits beside/below the
+   subtitle line, not attached to the laptop. */
+.project-hero__character--mobile {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  /* Locked to Figma's 375px mobile reference frame, in fixed px - not
+     vw/clamp. The reference design was never fluid across this whole
+     range in the first place (it's one fixed frame), so scaling it
+     continuously just drifted the laptop/text/character out of the
+     relationship Figma actually specifies. Pinning it to the 375px
+     numbers holds correctly for the realistic phone range (~320-430px)
+     and simply stays put (doesn't grow/shrink) outside it. */
+  .project-hero__inner,
+  .project-hero--reversed .project-hero__inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "graphic";
+    justify-items: center;
+    text-align: center;
+    padding-inline: 0;
+    /* text row -> graphic row: Figma has the subtitle's box bottom at
+       y=201 and the laptop's own top (not the taller character+laptop
+       group bounding it) at y=239 - a 38px gap. */
+    row-gap: 38px;
+  }
+
+  .project-hero__text-block {
+    width: 263px;
+    /* height: auto, not a fixed box - a fixed height here only ever
+       existed to anchor the (now-removed) mobile character; forcing it
+       risked clipping the subtitle's second line since real font
+       metrics render a hair taller than Figma's own 162px box. */
+    margin-inline: auto;
+  }
+
+  .project-hero__heading {
+    /* Venus -> title: Figma's box gap here is 20px, not the shared
+       clamp(14px, 2.34vw, 30px) (which bottoms out at 14px at this
+       width - that's the "not correct" spacing). */
+    gap: 20px;
+  }
+
+  .project-hero__eyebrow,
+  .project-hero__subtitle {
+    text-align: center;
+  }
+
+  .project-hero__graphic,
+  .project-hero--reversed .project-hero__graphic {
+    width: 319px;
+    /* Figma's own 37px/19px margins were asymmetric to leave room for
+       the character bleeding off its right edge. With her removed
+       there's no longer a reason for that lopsided offset, so this
+       centers true (justify-self default handles it) instead of
+       reproducing a skew that no longer serves a purpose. */
+    justify-self: center;
+    /* The mobile laptop asset's own ratio (319 x 195.7 in Figma) is
+       visibly squatter than the desktop graphic's 1449/933 - reusing
+       that stretched this taller than Figma's reference and threw off
+       the gap below it. */
+    aspect-ratio: 319 / 195.7;
+  }
+
+  /* The framed-screenshot hero graphic (see the desktop rule above)
+     keeps its own real ratio on mobile too, instead of the laptop
+     mobile asset's 319/195.7. */
+  .project-hero--framed .project-hero__graphic {
+    aspect-ratio: 2408 / 1320;
+  }
+
+  .project-hero__line-row {
+    display: none;
+  }
+
+  /* Hidden on mobile: her bounding box can be placed at the exact spot
+     Figma specifies (confirmed pixel-for-pixel against the reference),
+     but our character artwork is a different pose - sitting cross-
+     legged, mid-air - than the reference's character, who dangles her
+     legs over an edge. Box position matching isn't enough to read as
+     "sitting on" the laptop when the pose itself isn't built to rest on
+     anything; it just looks like she's floating next to it. Omitting
+     her avoids that, rather than chasing a fix no position value can
+     actually deliver. */
+  .project-hero__character--mobile {
+    display: none;
+  }
+}

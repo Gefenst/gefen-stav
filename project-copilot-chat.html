@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copilot Chat — Gefen Stav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/project-hero.css" />
+  <link rel="stylesheet" href="css/overview.css" />
+  <link rel="stylesheet" href="css/research.css" />
+  <link rel="stylesheet" href="css/design.css" />
+  <link rel="stylesheet" href="css/project-nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body class="theme-mauve">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html#projects" class="back-link">
+        <img src="assets/icons/projects/arrow-dark.svg" alt="" class="back-link__icon" />
+        Back
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Project sections">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#persona" class="nav-link">Persona</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#design" class="nav-link">Design</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="project-hero" id="top">
+    <div class="project-hero__doodles" aria-hidden="true">
+      <div class="project-hero__doodle-card project-hero__doodle-card--a" style="top: 32%;">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 19c-9 0-16 7-16 15 0 6 3 10 7 13 2 2 3 4 3 7h12c0-3 1-5 3-7 4-3 7-7 7-13 0-8-7-15-16-15z" />
+          <path d="M26 50h12" /><path d="M27.5 56h9" />
+          <path d="M12 2Q12 8 18 8Q12 8 12 14Q12 8 6 8Q12 8 12 2Z" />
+          <path d="M50 2Q50 6 54 6Q50 6 50 10Q50 6 46 6Q50 6 50 2Z" />
+        </svg>
+      </div>
+      <div class="project-hero__doodle-card project-hero__doodle-card--b">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 58V8" /><path d="M4 15l6-7 6 7" /><path d="M10 58h44" /><path d="M51 52l7 6-7 6" />
+          <path d="M14 46c6-4 10 6 16 2s2-14 10-10 6 10 14 4" />
+          <path d="M44 25.5l4.5-3" /><path d="M48.5 21l4.5-3" />
+        </svg>
+      </div>
+      <div class="project-hero__doodle-card project-hero__doodle-card--c">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 58L36 32" />
+          <path d="M46 11Q46 22 57 22Q46 22 46 33Q46 22 35 22Q46 22 46 11Z" />
+          <path d="M55 1Q55 6 60 6Q55 6 55 11Q55 6 50 6Q55 6 55 1Z" />
+          <path d="M33 2Q33 6 37 6Q33 6 33 10Q33 6 29 6Q33 6 33 2Z" />
+        </svg>
+      </div>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+    </div>
+    <div class="project-hero__inner">
+      <div class="project-hero__content">
+        <div class="project-hero__text-block">
+        <div class="project-hero__heading">
+          <h1 class="text-title text-title--word project-hero__title">Chat Copilot</h1>
+        </div>
+        <p class="text-body-lg project-hero__subtitle">Responsabilities: UX, Research</p>
+      </div>
+      <div class="project-hero__line-row">
+        <img class="project-hero__decor-line" src="assets/icons/project-hero/line-dots-copilot.svg" alt="" aria-hidden="true" />
+        <img
+          class="project-hero__character"
+          src="assets/images/project-hero/character-sitting-chatcopilot.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+      </div>
+      <div class="project-hero__graphic" style="width: clamp(220px, 47.7vw, 610px); aspect-ratio: 1228 / 918; align-self: center; margin-top: clamp(-90px, -5.2vw, -25px);">
+        <img
+          class="project-hero__graphic-img"
+          src="assets/images/project-hero/chatcopilot-ui-hero.png"
+          alt="AI Copilot chat interface beside a Logs table, showing a conversation about recent attacks"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="overview">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/overview/icon-overview-mauve.svg" alt="" />
+        <h2 class="text-section-title">Overview</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          This project focuses on improving the Copilot experience in a
+          cybersecurity platform, specifically for searching complex log
+          data. Logs contain large volumes of dense, technical information,
+          making them difficult to navigate and analyze. Users often need to
+          perform complex queries to find relevant logs, which slows down
+          investigations and creates friction. The goal is to simplify log
+          search through a Copilot chat interface, enabling faster, more
+          intuitive access to relevant data.
+        </p>
+        <div class="overview__cards">
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-mauve.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">The Problem:</p>
+              <p class="text-intro">
+                Searching complex log data is challenging due to its volume
+                and technical complexity. Within a Copilot chat interface,
+                limited screen space makes it even harder to present
+                relevant results clearly and maintain an intuitive,
+                efficient search experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-new-mauve.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Pain Points:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">The chat interface restricts how much information can be displayed at once</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Users struggle to formulate precise searches to find relevant logs</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-mauve.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Our Goals:</p>
+              <p class="text-intro">
+                Enable users to search and explore complex log data through
+                a Copilot chat interface in a way that is intuitive,
+                efficient, and scalable while presenting relevant
+                information clearly within limited screen space.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="persona">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/persona/icon-user-mauve.svg" alt="" />
+        <h2 class="text-section-title">Persona</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          Alon is a senior security analyst who investigates threats and
+          analyzes large volumes of logs. He needs a fast, intuitive way to
+          build complex queries and surface relevant data directly within
+          the Copilot chat interface.
+        </p>
+        <div class="overview__cards">
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-mauve.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Frustrations:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Limited chat interface makes it hard to view and navigate results</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Difficulty creating precise queries to find relevant logs</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Overwhelming amount of data, making results hard to scan and interpret</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/persona/icon-lightbulb-mauve.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Needs:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Simple and guided way to construct complex log queries</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Clear, focused results that highlight the most relevant data</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Efficient way to explore and navigate logs within a constrained interface</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="research">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/research/icon-search-mauve.svg" alt="" />
+        <h2 class="text-section-title">Research</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          I conducted a competitive analysis of platforms with integrations
+          focused pages to understand how discovery and management
+          experiences are structured and prioritized. Combined with
+          insights from the PM, this research helped define what
+          information users need at different stages, when exploring new
+          integrations versus managing existing ones and highlighted
+          patterns for creating a more intuitive, scalable, and user
+          friendly experience.
+        </p>
+        <div class="research__findings">
+          <p class="text-subhead">Research Findings</p>
+          <div class="overview__cards">
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Guided, filter based search</p>
+                <p class="text-intro">
+                  Enables users to build complex queries intuitively without
+                  needing technical knowledge.
+                </p>
+              </div>
+              <div class="research-card__thumb research-card__thumb--fit" style="aspect-ratio: 855 / 456;">
+                <img src="assets/images/research/guided-filter-search.png" alt="Reference screenshot of a guided, filter based search using advanced filters" />
+              </div>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Partial results in context</p>
+                <p class="text-intro">
+                  Allows quick scanning of relevant data directly within the
+                  main view.
+                </p>
+              </div>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Expandable results view</p>
+                <p class="text-intro">
+                  Provides full details on demand while keeping the
+                  interface clean.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="design">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/research/icon-search-mauve.svg" alt="" />
+        <h2 class="text-section-title">Design</h2>
+      </div>
+      <div class="overview__body">
+        <div class="research__findings">
+          <p class="text-subhead">Ideation &amp; Wireframing</p>
+          <p class="text-intro">
+            Based on the persona's needs, the defined problems, and
+            insights from competitive research, I created mid to high
+            fidelity mockups for the Copilot log search experience. The
+            design focuses on enabling users to perform complex searches
+            within a constrained chat interface, combining guided query
+            building with clear result presentation. Information is
+            structured to highlight the most relevant data, while
+            maintaining context and readability within limited screen
+            space. The mockups focus on simplifying query creation,
+            improving result clarity, and enabling efficient exploration of
+            complex logs, while reducing cognitive load and ensuring a
+            scalable and intuitive conversational experience.
+          </p>
+        </div>
+
+        <div class="overview__cards">
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Log Search Experience</p>
+              <p class="text-intro">
+                The log search experience is designed to simplify complex
+                queries within the Copilot chat interface, enabling users to
+                quickly find relevant log data. Instead of relying solely on
+                manual query writing, the search supports a guided,
+                filter-based approach that helps users build queries
+                intuitively while maintaining flexibility. Search results
+                are presented directly within the chat, showing a concise
+                preview of the most relevant information to support quick
+                scanning and evaluation. Users can expand results when
+                needed to access full log details, allowing deeper
+                investigation without overwhelming the interface.
+              </p>
+            </div>
+            <div class="design-card__illustration">
+              <img src="assets/images/design/log-search-experience-illustration.png" alt="Illustration of the Log Search Experience design, showing the guided filter-based query builder" />
+            </div>
+          </div>
+
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Expanded Results View</p>
+              <p class="text-intro">
+                To support deeper analysis, users can expand the search
+                results into a larger, dedicated view. This expanded screen
+                provides a more comprehensive layout, including additional
+                columns and richer data visibility, allowing users to
+                better explore and compare log entries.
+              </p>
+            </div>
+            <div class="design-card__illustration design-card__illustration--narrow">
+              <img src="assets/images/design/expanded-results-illustration.svg" alt="Illustration of the Expanded Results View design, showing the dedicated logs view with additional columns" />
+            </div>
+          </div>
+        </div>
+
+        <div class="research__findings">
+          <p class="text-subhead">Final Design</p>
+          <div class="design__final-shots">
+            <img src="assets/images/design/final-design-log-search.png" alt="Final design of the log search experience within the Copilot chat interface" />
+            <img src="assets/images/design/final-design-expanded-results.png" alt="Final design of the expanded results view with additional columns" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <div class="project-nav__inner">
+      <a href="project-aegiscore-policies.html" class="project-nav__link project-nav__link--prev">
+        <span class="project-nav__eyebrow">
+          <img src="assets/icons/projects/arrow-light.svg" alt="" class="project-nav__arrow project-nav__arrow--prev" />
+          <span class="project-nav__label">Previous Project</span>
+        </span>
+        <span class="project-nav__title">AegisCore Policies</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a href="index.html#top" class="logo-link">
+        <p class="logo-text">Gefen Stav</p>
+      </a>
+      <div class="site-footer__contact">
+        <a href="mailto:gefenstav@gmail.com" aria-label="Email Gefen Stav">
+          <img src="assets/icons/footer/icon-email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/gefen-stav/" target="_blank" rel="noopener" aria-label="Gefen Stav on LinkedIn">
+          <img src="assets/icons/footer/icon-linkedin.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venus Indicators — Gefen Stav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/project-hero.css" />
+  <link rel="stylesheet" href="css/overview.css" />
+  <link rel="stylesheet" href="css/research.css" />
+  <link rel="stylesheet" href="css/design.css" />
+  <link rel="stylesheet" href="css/project-nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body class="theme-teal">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html#projects" class="back-link">
+        <img src="assets/icons/projects/arrow-dark.svg" alt="" class="back-link__icon" />
+        Back
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Project sections">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#persona" class="nav-link">Persona</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#design" class="nav-link">Design</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="project-hero" id="top">
+    <div class="project-hero__doodles" aria-hidden="true">
+      <div class="project-hero__doodle-card project-hero__doodle-card--a">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 19c-9 0-16 7-16 15 0 6 3 10 7 13 2 2 3 4 3 7h12c0-3 1-5 3-7 4-3 7-7 7-13 0-8-7-15-16-15z" />
+          <path d="M26 50h12" /><path d="M27.5 56h9" />
+          <path d="M12 2Q12 8 18 8Q12 8 12 14Q12 8 6 8Q12 8 12 2Z" />
+          <path d="M50 2Q50 6 54 6Q50 6 50 10Q50 6 46 6Q50 6 50 2Z" />
+        </svg>
+      </div>
+      <div class="project-hero__doodle-card project-hero__doodle-card--b">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 58V8" /><path d="M4 15l6-7 6 7" /><path d="M10 58h44" /><path d="M51 52l7 6-7 6" />
+          <path d="M14 46c6-4 10 6 16 2s2-14 10-10 6 10 14 4" />
+          <path d="M44 25.5l4.5-3" /><path d="M48.5 21l4.5-3" />
+        </svg>
+      </div>
+      <div class="project-hero__doodle-card project-hero__doodle-card--c">
+        <svg class="project-hero__doodle-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 58L36 32" />
+          <path d="M46 11Q46 22 57 22Q46 22 46 33Q46 22 35 22Q46 22 46 11Z" />
+          <path d="M55 1Q55 6 60 6Q55 6 55 11Q55 6 50 6Q55 6 55 1Z" />
+          <path d="M33 2Q33 6 37 6Q33 6 33 10Q33 6 29 6Q33 6 33 2Z" />
+        </svg>
+      </div>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+      </svg>
+      <svg class="project-hero__scatter-mark project-hero__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+    </div>
+    <div class="project-hero__inner">
+      <div class="project-hero__content">
+        <div class="project-hero__text-block">
+        <div class="project-hero__heading">
+          <p class="text-greeting project-hero__eyebrow">Venus</p>
+          <h1 class="text-title text-title--word project-hero__title">Indicators</h1>
+        </div>
+        <p class="text-body-lg project-hero__subtitle">Responsabilities: UX, Research</p>
+      </div>
+      <div class="project-hero__line-row">
+        <img class="project-hero__decor-line" src="assets/icons/project-hero/line-dots-indicators.svg" alt="" aria-hidden="true" />
+        <img
+          class="project-hero__character"
+          src="assets/images/project-hero/character-sitting-v2.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+      </div>
+      <div class="project-hero__graphic" style="width: clamp(300px, 62.5vw, 800px); aspect-ratio: 1600 / 1000;">
+        <img
+          class="project-hero__graphic-img"
+          src="assets/images/project-hero/indicators - for hero.png"
+          alt="Laptop mockup of the Venus Indicators dashboard"
+        />
+        <img
+          class="project-hero__character project-hero__character--mobile"
+          src="assets/images/project-hero/character-sitting-v2.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="overview">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/overview/icon-overview-teal.svg" alt="" />
+        <h2 class="text-section-title">Overview</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          Venus is a cybersecurity platform that identifies and prioritizes
+          exposures and misconfigurations across cloud and on-prem
+          environments, aligned with business priorities. The Indicators
+          page enables risk assessment, indicator management, detailed
+          views, manual additions, and system-generated suggestions based
+          on existing indicators.
+        </p>
+        <div class="overview__cards">
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-teal.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">The Problem:</p>
+              <p class="text-intro">
+                Users are exposed to a large amount of indicator related
+                information, making it difficult to quickly identify what
+                is most critical. This leads to high cognitive load and
+                highlights the lack of clear hierarchy and structure
+                tailored to their needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-new-teal.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Pain Points:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Difficulty identifying critical indicator information</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Time-consuming understanding of indicator context and impact</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Frustration caused by information overload</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-teal.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Our Goals:</p>
+              <p class="text-intro">
+                Reduce cognitive load by prioritizing critical indicator
+                information, improving discoverability, and enabling users
+                to quickly understand indicator context and impact to
+                support faster, more confident decision making.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="persona">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/persona/icon-user-teal.svg" alt="" />
+        <h2 class="text-section-title">Persona</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          Eli is a senior security analyst with several years of experience
+          in threat investigation and incident response, working as part
+          of a global SOC team in a mid sized tech company. His daily work
+          involves monitoring alerts, analyzing indicators, and correlating
+          data across multiple security tools to make fast, informed
+          decisions under pressure.
+        </p>
+        <div class="overview__cards">
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/overview/icon-warning-teal.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Frustrations:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Too much information presented at once, with no clear hierarchy</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Difficulty locating key details within complex indicator data</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Cognitive overload when switching between multiple dashboards</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Lack of clarity around what data is most relevant for decisions</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overview-card">
+            <span class="overview-card__icon">
+              <img src="assets/icons/persona/icon-lightbulb-teal.svg" alt="" />
+            </span>
+            <div class="overview-card__content">
+              <p class="text-card-title">Needs:</p>
+              <ul class="overview-card__list">
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">A centralized view where important indicator information is easy to find</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Clear structure and prioritization in data presentation</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Fast access to context and trends for each indicator</p>
+                </li>
+                <li>
+                  <img src="assets/icons/overview/bullet-dot.svg" alt="" />
+                  <p class="text-intro">Efficient navigation that supports decision-making under time pressure</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="research">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/research/icon-search-teal.svg" alt="" />
+        <h2 class="text-section-title">Research</h2>
+      </div>
+      <div class="overview__body">
+        <p class="text-intro">
+          I conducted a competitive analysis of platforms with indicator
+          focused pages to examine how critical information is structured
+          and prioritized. Combined with insights from the PM, this
+          research helped identify the most relevant data for user
+          decision making and compare different approaches to improving
+          clarity and reducing cognitive load.
+        </p>
+        <div class="research__findings">
+          <p class="text-subhead">Research Findings</p>
+          <div class="overview__cards">
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Details Pane</p>
+                <p class="text-intro">
+                  Presenting indicator data in a dedicated details pane
+                  helps reduce information overload in the table by
+                  centralizing all relevant data in a focused, structured
+                  view.
+                </p>
+              </div>
+              <div class="research-card__thumb">
+                <img src="assets/images/research/details-pane.png" alt="Reference screenshot of a details pane pattern" />
+              </div>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Navigation By Tabs</p>
+                <p class="text-intro">
+                  Information is divided into tabs to support intuitive
+                  navigation, improve scannability, help users easily
+                  locate the information they need by grouping content
+                  into clear topics, and reduce cognitive load.
+                </p>
+              </div>
+              <div class="research-card__thumb">
+                <img src="assets/images/research/navigation-tabs.png" alt="Reference screenshot of tab-based navigation" />
+              </div>
+            </div>
+
+            <div class="research-card">
+              <div class="research-card__content">
+                <p class="text-card-title">Clear Information Hierarchy</p>
+                <p class="text-intro">
+                  Structuring indicator data by importance helps users
+                  quickly identify critical information while minimizing
+                  cognitive load.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview" id="design">
+      <div class="overview__scatter" aria-hidden="true">
+        <svg class="overview__scatter-mark overview__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+        </svg>
+        <svg class="overview__scatter-mark overview__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4L12 12" /><path d="M12 4L4 12" />
+        </svg>
+      </div>
+    <div class="overview__inner">
+      <div class="overview__heading">
+        <img src="assets/icons/research/icon-search-teal.svg" alt="" />
+        <h2 class="text-section-title">Design</h2>
+      </div>
+      <div class="overview__body">
+        <div class="research__findings">
+          <p class="text-subhead">Ideation &amp; Wireframing</p>
+          <p class="text-intro">
+            Based on user needs and competitive research, I created
+            mid-to-high fidelity mockups featuring a dedicated details pane.
+            This allows users to explore indicator data without losing
+            their place in the main table. Information is organized into
+            tabs to improve hierarchy, reduce cognitive load, and ensure a
+            clear, consistent experience.
+          </p>
+        </div>
+
+        <div class="overview__cards">
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Overview</p>
+              <p class="text-intro">
+                To reduce cognitive load and improve navigation, indicator
+                information was organized into dedicated tabs based on
+                users’ goals. The Overview tab brings together essential
+                details, recent activity, relevance, and comments, allowing
+                users to quickly access key information.
+              </p>
+            </div>
+            <div class="design-card__illustration">
+              <img src="assets/images/design/overview-illustration.svg" alt="Illustration of the Overview tab design exploration" />
+            </div>
+          </div>
+
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Products</p>
+              <p class="text-intro">
+                The Products tab displays existing products and their
+                integration status in relation to the indicator. During the
+                design process, a key consideration was whether users should
+                navigate by product or integration status. Through
+                collaboration with the PM, we identified different user
+                needs and decided to support both approaches. Users can
+                search and explore integrations by status or by product,
+                grouped by vendor, allowing greater flexibility and
+                supporting different workflows.
+              </p>
+            </div>
+            <div class="design-card__illustration design-card__illustration--narrow">
+              <img src="assets/images/design/products-illustration.svg" alt="Illustration of the Products tab design exploration" />
+            </div>
+          </div>
+
+          <div class="research-card design-card">
+            <div class="design-card__content">
+              <p class="text-card-title">Related Indicators</p>
+              <p class="text-intro">
+                The Related Indicators tab helps users understand
+                connections between indicators and manage them effectively.
+                During the design process, we considered whether to present
+                relationships through a visual graph or a structured list.
+                In collaboration with the PM, we decided to support both
+                approaches: a graph for exploring relationships and broader
+                context, and a list for quickly locating and managing
+                specific indicators. Each indicator includes key details,
+                status, and direct access to relevant actions.
+              </p>
+            </div>
+            <div class="design-card__illustration">
+              <img src="assets/images/design/related-indicators-illustration.svg" alt="Illustration of the Related Indicators tab design exploration" />
+            </div>
+          </div>
+        </div>
+
+        <div class="research__findings">
+          <p class="text-subhead">Final Design</p>
+          <div class="design__final-shots">
+            <img src="assets/images/design/final-design-overview.png" alt="Final design of the indicator Overview tab" />
+            <img src="assets/images/design/final-design-products.png" alt="Final design of the indicator Products tab" />
+            <img src="assets/images/design/final-design-related.png" alt="Final design of the indicator Related Indicators tab" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <div class="project-nav__inner">
+      <a href="project-venus-integrations.html" class="project-nav__link project-nav__link--next">
+        <span class="project-nav__eyebrow">
+          <span class="project-nav__label">Next Project</span>
+          <img src="assets/icons/projects/arrow-light.svg" alt="" class="project-nav__arrow" />
+        </span>
+        <span class="project-nav__title">Venus Integrations</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a href="index.html#top" class="logo-link">
+        <p class="logo-text">Gefen Stav</p>
+      </a>
+      <div class="site-footer__contact">
+        <a href="mailto:gefenstav@gmail.com" aria-label="Email Gefen Stav">
+          <img src="assets/icons/footer/icon-email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/gefen-stav/" target="_blank" rel="noopener" aria-label="Gefen Stav on LinkedIn">
+          <img src="assets/icons/footer/icon-linkedin.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

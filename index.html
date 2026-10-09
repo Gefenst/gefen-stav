@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gefen Stav — Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="#top" class="logo-link">
+        <p class="logo-text">Gefen Stav</p>
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Main">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero__doodles" aria-hidden="true">
+      <div class="hero__doodle-card hero__doodle-card--bulb hero__doodle-card--teal">
+        <svg class="hero__doodle-icon hero__doodle--teal" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 19c-9 0-16 7-16 15 0 6 3 10 7 13 2 2 3 4 3 7h12c0-3 1-5 3-7 4-3 7-7 7-13 0-8-7-15-16-15z" />
+          <path d="M26 50h12" />
+          <path d="M27.5 56h9" />
+          <path d="M12 2Q12 8 18 8Q12 8 12 14Q12 8 6 8Q12 8 12 2Z" />
+          <path d="M50 2Q50 6 54 6Q50 6 50 10Q50 6 46 6Q50 6 50 2Z" />
+        </svg>
+      </div>
+      <div class="hero__doodle-card hero__doodle-card--graph hero__doodle-card--blue">
+        <svg class="hero__doodle-icon hero__doodle--blue" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 58V8" />
+          <path d="M4 15l6-7 6 7" />
+          <path d="M10 58h44" />
+          <path d="M51 52l7 6-7 6" />
+          <path d="M14 46c6-4 10 6 16 2s2-14 10-10 6 10 14 4" />
+          <path d="M44 25.5l4.5-3" />
+          <path d="M48.5 21l4.5-3" />
+        </svg>
+      </div>
+      <div class="hero__doodle-card hero__doodle-card--wand hero__doodle-card--olive">
+        <svg class="hero__doodle-icon hero__doodle--olive" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 58L36 32" />
+          <path d="M46 11Q46 22 57 22Q46 22 46 33Q46 22 35 22Q46 22 46 11Z" />
+          <path d="M55 1Q55 6 60 6Q55 6 55 11Q55 6 50 6Q55 6 55 1Z" />
+          <path d="M33 2Q33 6 37 6Q33 6 33 10Q33 6 29 6Q33 6 33 2Z" />
+        </svg>
+      </div>
+      <div class="hero__doodle-card hero__doodle-card--search hero__doodle-card--mauve">
+        <svg class="hero__doodle-icon hero__doodle--mauve" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="25" cy="25" r="15" />
+          <path d="M19 15Q14 18 14 24" />
+          <path d="M36 36L53 53" />
+          <path d="M46 2Q46 7 51 7Q46 7 46 12Q46 7 41 7Q46 7 46 2Z" />
+        </svg>
+      </div>
+
+      <!-- Loose scatter: a few small stars/x's at different sizes, kept
+           sparse so they read as background texture, not more subjects. -->
+      <svg class="hero__doodle hero__scatter hero__scatter--star-sm hero__doodle--blue" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="hero__doodle hero__scatter hero__scatter--x-sm hero__doodle--mauve" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="hero__doodle hero__scatter hero__scatter--x-md hero__doodle--teal" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="hero__doodle hero__scatter hero__scatter--star-md hero__doodle--olive" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="hero__doodle hero__scatter hero__scatter--star-lg hero__doodle--mauve" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="hero__doodle hero__scatter hero__scatter--x-lg hero__doodle--blue" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="hero__doodle hero__scatter hero__scatter--star-xs hero__doodle--teal" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+    </div>
+    <div class="hero__content">
+      <div class="hero__intro">
+        <div class="hero__headline">
+          <p class="text-greeting">Hello, I’m Gefen</p>
+          <h1 class="text-title">
+            <span>a</span><span>Product Designer</span>
+          </h1>
+        </div>
+        <p class="text-body-lg">
+          Simplifying complexity in cybersecurity and enterprise design
+          with 5 years of experience.
+        </p>
+      </div>
+      <a href="#projects" class="btn btn--primary">View my projects</a>
+    </div>
+
+    <div class="hero__decor" aria-hidden="true">
+      <div class="hero__line"></div>
+      <div class="hero__dots">
+        <img src="assets/icons/hero/dot-teal-solid.svg" alt="" />
+        <img src="assets/icons/hero/dot-blue-hollow.svg" alt="" />
+        <img src="assets/icons/hero/dot-blue-soft.svg" alt="" />
+        <img src="assets/icons/hero/dot-olive-soft.svg" alt="" />
+        <img src="assets/icons/hero/dot-olive-hollow.svg" alt="" />
+        <img src="assets/icons/hero/dot-mauve-bullseye.svg" alt="" />
+        <img src="assets/icons/hero/dot-mauve-anchor.svg" alt="" />
+      </div>
+      <img
+        class="hero__illustration"
+        src="assets/icons/hero/illustration-person-laptop.svg"
+        alt="Illustration of Gefen working at a laptop"
+      />
+    </div>
+  </section>
+
+  <section class="case-study theme-teal" id="projects">
+    <div class="case-study__inner">
+      <div class="case-study__text">
+        <div class="case-study__heading">
+          <h2 class="text-section-title">Venus Indicators</h2>
+          <p class="text-intro">
+            Venus Indicators simplifies security risk assessment and
+            indicator management across cloud and on-prem environments.
+          </p>
+        </div>
+        <a href="project-venus-indicators.html" class="btn btn--case">
+          View case study
+          <img src="assets/icons/projects/arrow-right.svg" alt="" />
+        </a>
+      </div>
+      <div class="case-study__preview">
+        <img
+          src="assets/images/project-hero/indicators.png"
+          alt="Venus Indicators dashboard preview"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="case-study theme-blue">
+    <div class="case-study__inner">
+      <div class="case-study__text">
+        <div class="case-study__heading">
+          <h2 class="text-section-title">Venus Integrations</h2>
+          <p class="text-intro">
+            Venus simplifies security risk management across cloud and
+            on-prem environments, enabling users to discover, configure,
+            and manage integrations in one place.
+          </p>
+        </div>
+        <a href="project-venus-integrations.html" class="btn btn--case">
+          View case study
+          <img src="assets/icons/projects/arrow-right.svg" alt="" />
+        </a>
+      </div>
+      <div class="case-study__preview">
+        <img
+          src="assets/images/project-hero/integrations.png"
+          alt="Venus Integrations preview"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="case-study theme-olive">
+    <div class="case-study__inner">
+      <div class="case-study__text">
+        <div class="case-study__heading">
+          <h2 class="text-section-title">AegisCore Policies</h2>
+          <p class="text-intro">
+            Simplifying security policy creation in cloud environments by
+            making complex rules and conditions easier to define, reducing
+            errors and saving time.
+          </p>
+        </div>
+        <a href="project-aegiscore-policies.html" class="btn btn--case">
+          View case study
+          <img src="assets/icons/projects/arrow-right.svg" alt="" />
+        </a>
+      </div>
+      <div class="case-study__preview">
+        <img
+          src="assets/images/project-hero/policies.png"
+          alt="AegisCore Policies interface preview"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="case-study theme-mauve">
+    <div class="case-study__inner">
+      <div class="case-study__text">
+        <div class="case-study__heading">
+          <h2 class="text-section-title">Copilot Chat</h2>
+          <p class="text-intro">
+            Simplifying complex log searches through a Copilot chat
+            interface, enabling faster investigations and more intuitive
+            access to relevant security data.
+          </p>
+        </div>
+        <a href="project-copilot-chat.html" class="btn btn--case">
+          View case study
+          <img src="assets/icons/projects/arrow-right.svg" alt="" />
+        </a>
+      </div>
+      <div class="case-study__preview">
+        <img
+          src="assets/images/project-hero/copilot.png"
+          alt="Copilot Chat interface preview"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about__scatter" aria-hidden="true">
+      <svg class="about__scatter-mark about__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--7" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--8" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--9" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--10" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
+      </svg>
+      <svg class="about__scatter-mark about__scatter-mark--19" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M4 4L12 12" />
+        <path d="M12 4L4 12" />
+      </svg>
+    </div>
+    <div class="about__inner">
+      <div class="about__palette" aria-hidden="true">
+        <span class="about__palette-dot about__palette-dot--teal"></span>
+        <span class="about__palette-dot about__palette-dot--blue"></span>
+        <span class="about__palette-dot about__palette-dot--olive"></span>
+        <span class="about__palette-dot about__palette-dot--mauve"></span>
+      </div>
+      <h2 class="text-section-title">I’m Gefen</h2>
+      <div class="about__body">
+        <p class="text-intro">
+          I am a Product Designer with a background in
+          <strong>Psychology, Neuroscience, and Cognition</strong>, and
+          <strong>5 years of experience</strong> in product companies
+          specializing in <strong>cybersecurity</strong>. I believe in
+          creating <strong>simple and clear user flows</strong>, focusing
+          on intuitive, user-centered solutions. I have extensive
+          experience <strong>designing complex systems</strong> and
+          processes, conducting usability testing, and collaborating
+          closely with developers, Product Managers, and other designers.
+        </p>
+        <div class="about__row">
+          <div class="about__column">
+            <p class="text-intro">
+              I take ownership of the end-to-end design process, from
+              concept through delivery, ensuring that the final product
+              meets both user needs and business goals.
+            </p>
+            <div class="about__contact" id="contact">
+              <h3 class="text-subhead">Contact me</h3>
+              <ul class="contact-list">
+                <li class="contact-item">
+                  <img
+                    class="contact-item__icon"
+                    src="assets/icons/about/icon-phone.svg"
+                    alt=""
+                  />
+                  <a class="text-contact contact-item__tel" href="tel:+972509744328">050-9744328</a>
+                </li>
+                <li class="contact-item">
+                  <span class="contact-item__icon--wrapped">
+                    <img src="assets/icons/about/icon-email.svg" alt="" />
+                  </span>
+                  <button
+                    type="button"
+                    class="text-contact contact-item__copy"
+                    data-copy="gefenstav@gmail.com"
+                  >gefenstav@gmail.com</button>
+                </li>
+                <li class="contact-item">
+                  <img
+                    class="contact-item__icon"
+                    src="assets/icons/about/icon-linkedin.svg"
+                    alt=""
+                  />
+                  <a
+                    class="text-contact contact-item__link"
+                    href="https://www.linkedin.com/in/gefen-stav/"
+                    target="_blank"
+                    rel="noopener"
+                  >linkedin.com/in/gefen-stav</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            class="about__illustration"
+            src="assets/icons/about/illustration-gefen-standing.svg"
+            alt="Illustration of Gefen standing holding a notebook"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a href="#top" class="logo-link">
+        <p class="logo-text">Gefen Stav</p>
+      </a>
+      <div class="site-footer__contact">
+        <a href="mailto:gefenstav@gmail.com" aria-label="Email Gefen Stav">
+          <img src="assets/icons/footer/icon-email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/gefen-stav/" target="_blank" rel="noopener" aria-label="Gefen Stav on LinkedIn">
+          <img src="assets/icons/footer/icon-linkedin.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
