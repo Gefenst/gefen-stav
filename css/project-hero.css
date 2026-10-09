@@ -311,7 +311,12 @@
   }
 
   .project-hero__text-block {
-    width: 263px;
+    /* Wider than Figma's 263px reference: that number worked for the old
+       smaller title size, but the bigger mobile title (above) needs more
+       room so a long single word like "Integrations" doesn't wrap
+       mid-word. Capped against the viewport so it still never touches
+       the section's side edges on the narrowest phones. */
+    width: min(320px, calc(100vw - 48px));
     /* height: auto, not a fixed box - a fixed height here only ever
        existed to anchor the (now-removed) mobile character; forcing it
        risked clipping the subtitle's second line since real font
@@ -324,6 +329,16 @@
        clamp(14px, 2.34vw, 30px) (which bottoms out at 14px at this
        width - that's the "not correct" spacing). */
     gap: 20px;
+  }
+
+  /* The project name is the page's main heading - it needs to read as
+     bigger than the section titles below it ("Overview", "Research"...),
+     which bottom out at 32px (--fs-section-title's own clamp floor).
+     --fs-display-title's floor (26px) undershoots that, so this page's
+     own h1 gets a mobile floor of its own, same as the home page's
+     hero title gets in hero.css. */
+  .project-hero__title {
+    font-size: 44px;
   }
 
   .project-hero__eyebrow,
@@ -369,5 +384,81 @@
      actually deliver. */
   .project-hero__character--mobile {
     display: none;
+  }
+
+  /* Same reasoning as the home hero's mobile doodles: the desktop
+     positions assume side margins beside a wide two-column layout, but
+     mobile stacks into one centered column, so the marks move into the
+     actual empty bands - above the eyebrow, and the side margins either
+     side of the (narrower-than-viewport) centered text/graphic - instead
+     of the text's own left/right edges. One shared set of positions for
+     both the default and --reversed layouts, since mobile centers both
+     the same way regardless of which side the desktop graphic sits on. */
+  .project-hero__doodles,
+  .project-hero--reversed .project-hero__doodles {
+    display: block;
+  }
+
+  .project-hero__doodle-card--a,
+  .project-hero__doodle-card--b,
+  .project-hero__doodle-card--c {
+    width: 34px;
+    height: 34px;
+  }
+
+  .project-hero__doodle-card--a,
+  .project-hero--reversed .project-hero__doodle-card--a {
+    top: 1%;
+    left: 5%;
+    right: auto;
+  }
+
+  .project-hero__doodle-card--b,
+  .project-hero--reversed .project-hero__doodle-card--b {
+    top: 1%;
+    left: auto;
+    right: 5%;
+  }
+
+  .project-hero__doodle-card--c,
+  .project-hero--reversed .project-hero__doodle-card--c {
+    top: 94%;
+    left: auto;
+    right: 6%;
+  }
+
+  .project-hero__scatter-mark--1,
+  .project-hero--reversed .project-hero__scatter-mark--1 {
+    top: 16%;
+    left: 2%;
+    right: auto;
+  }
+
+  .project-hero__scatter-mark--2,
+  .project-hero--reversed .project-hero__scatter-mark--2 {
+    top: 32%;
+    left: auto;
+    right: 2%;
+  }
+
+  .project-hero__scatter-mark--3,
+  .project-hero--reversed .project-hero__scatter-mark--3 {
+    top: 50%;
+    left: 2%;
+    right: auto;
+  }
+
+  .project-hero__scatter-mark--4,
+  .project-hero--reversed .project-hero__scatter-mark--4 {
+    top: 94%;
+    left: 6%;
+    right: auto;
+  }
+
+  .project-hero__scatter-mark--5,
+  .project-hero--reversed .project-hero__scatter-mark--5 {
+    top: 10%;
+    left: 50%;
+    right: auto;
   }
 }

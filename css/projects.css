@@ -1,6 +1,7 @@
 .case-study {
   background: var(--color-text-light);
   padding-block: clamp(50px, 5.5vw, 90px);
+  padding-inline: 20px;
 }
 
 .case-study__inner {

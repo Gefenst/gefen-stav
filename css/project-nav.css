@@ -90,18 +90,26 @@
 }
 
 @media (max-width: 600px) {
+  /* Stacking the full prev/next cards (eyebrow + project title each)
+     leaves too little room on a phone - condense to just the arrow and
+     the "Previous/Next Project" label, side by side, like a simple
+     pager instead of two full-height cards. */
   .project-nav__inner {
-    flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .project-nav__link--next {
     margin-left: 0;
-    align-items: flex-start;
+    align-items: flex-end;
   }
 
   .project-nav__link:only-child {
     align-items: center;
     text-align: center;
+  }
+
+  .project-nav__title {
+    display: none;
   }
 }

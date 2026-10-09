@@ -377,4 +377,35 @@
   .hero {
     padding-bottom: 150px;
   }
+
+  /* The desktop doodle positions assume real side margins beside a
+     centered 1046px column - on a phone the text runs edge-to-edge, so
+     those same percentages would land the cushions on top of the words.
+     Mobile keeps the doodles, but only in the actual empty bands: the
+     gap above the greeting and the gap below the illustration - never
+     beside the text. Smaller size to match the smaller canvas. */
+  .hero__doodles {
+    display: block;
+  }
+
+  .hero__doodle-card--wand,
+  .hero__doodle-card--graph,
+  .hero__doodle-card--bulb,
+  .hero__doodle-card--search {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero__doodle-card--wand { top: 3%; left: 9%; --r: -14deg; }
+  .hero__doodle-card--bulb { top: 3%; left: 76%; --r: 10deg; }
+  .hero__doodle-card--graph { top: 91%; left: 10%; --r: 9deg; }
+  .hero__doodle-card--search { top: 91%; left: 78%; --r: -11deg; }
+
+  .hero__scatter--star-sm { top: 10%; left: 28%; }
+  .hero__scatter--x-sm { top: 1%; left: 45%; }
+  .hero__scatter--x-md { top: 12%; right: 10%; left: auto; }
+  .hero__scatter--star-md { top: 94%; left: 32%; }
+  .hero__scatter--star-lg { top: 96%; left: 50%; }
+  .hero__scatter--x-lg { top: 85%; right: 6%; left: auto; }
+  .hero__scatter--star-xs { top: 86%; left: 22%; }
 }
