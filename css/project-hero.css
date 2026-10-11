@@ -457,44 +457,74 @@
     display: none;
   }
 
-  /* Only two circles fit mobile well, same pair in the same spot
-     regardless of layout direction (mobile centers both --default and
-     --reversed the same way) - one peeking from the top corner above
-     the eyebrow/title, one in the band between the subtitle and the
-     graphic. The third circle and both stars are dropped: the stars
-     specifically track the character, who is hidden on mobile (her
-     pose doesn't read as "sitting on" the laptop at this size - see
-     .project-hero__character--mobile above), so they'd have nothing to
-     sit beside. Fixed px, not percentages, anchored from the hero's own
-     top edge so the clearance stays fixed regardless of content height. */
+  /* Mobile has its own dedicated Figma reference (a 375px-wide frame),
+     not just a scaled-down crop of the desktop one: all three circles
+     plus both stars appear there, positioned with fixed px straight off
+     that frame - same spot regardless of layout direction (mobile
+     centers both --default and --reversed the same way). The stars
+     aren't tied to the character here (she's hidden on mobile - see
+     .project-hero__character--mobile above); in the reference they just
+     sit near the title/top circle as free-floating sparkles. */
   .project-hero__doodles,
   .project-hero--reversed .project-hero__doodles {
     display: block;
   }
 
+  /* Desktop anchors every piece by its center (translate(-50%,-50%));
+     mobile's fixed-px values below were measured as plain top-left
+     corners straight off the Figma frame, so transform is cleared. */
+  .project-hero__blob--a,
+  .project-hero--reversed .project-hero__blob--a,
   .project-hero__blob--b,
+  .project-hero--reversed .project-hero__blob--b,
+  .project-hero__blob--c,
+  .project-hero--reversed .project-hero__blob--c,
   .project-hero__star--a,
-  .project-hero__star--b {
-    display: none;
+  .project-hero--reversed .project-hero__star--a,
+  .project-hero__star--b,
+  .project-hero--reversed .project-hero__star--b {
+    transform: none;
   }
 
   .project-hero__blob--a,
   .project-hero--reversed .project-hero__blob--a {
-    left: -40px;
-    top: -24px;
-    width: 150px;
-    /* Desktop anchors this by its center (translate(-50%,-50%)); mobile's
-       fixed-px values above were tuned for a plain top-left corner. */
-    transform: none;
+    left: 31px;
+    top: -44px;
+    width: 303px;
+  }
+
+  /* blob--b and both stars need a higher-specificity selector here than
+     the other two: the desktop rules that split them further between
+     --reversed and --reversed--framed (above) are 3 classes deep, which
+     would otherwise outrank a plain ".project-hero--reversed .x" mobile
+     override at 2 - ".project-hero__doodles" as a third qualifier just
+     matches that specificity so the mobile value (later in the
+     file) wins as intended. */
+  .project-hero__blob--b,
+  .project-hero--reversed .project-hero__doodles .project-hero__blob--b {
+    left: 246px;
+    top: 296px;
+    width: 151px;
   }
 
   .project-hero__blob--c,
   .project-hero--reversed .project-hero__blob--c {
-    left: auto;
-    top: auto;
-    right: 24px;
-    bottom: 100px;
-    width: 90px;
-    transform: none;
+    left: 0;
+    top: 466px;
+    width: 104px;
+  }
+
+  .project-hero__star--a,
+  .project-hero--reversed .project-hero__doodles .project-hero__star--a {
+    left: 242px;
+    top: 118px;
+    width: 35px;
+  }
+
+  .project-hero__star--b,
+  .project-hero--reversed .project-hero__doodles .project-hero__star--b {
+    left: 280px;
+    top: 93px;
+    width: 20px;
   }
 }
