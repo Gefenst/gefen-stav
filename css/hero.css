@@ -418,8 +418,16 @@
 
   .hero__doodle-card--wand { top: 26px; left: 32px; --r: -14deg; }
   .hero__doodle-card--bulb { top: 26px; right: 32px; --r: 10deg; }
-  .hero__doodle-card--graph { bottom: 34px; left: 32px; --r: 9deg; }
-  .hero__doodle-card--search { bottom: 34px; right: 32px; --r: -11deg; }
+  /* The bottom pair sat right beside the illustration (its own centered
+     220px width leaves only ~77px either side at this viewport), close
+     enough to read as crowding or overlapping the character rather than
+     sitting clearly apart from her. Dropped on mobile instead of
+     fighting for that tight margin - the two top cushions plus the
+     scatter marks below carry the motif on their own. */
+  .hero__doodle-card--graph,
+  .hero__doodle-card--search {
+    display: none;
+  }
 
   /* Scatter marks, same fixed-px logic as the cushions: kept to the two
      bands that are actually clear of text at any viewport width in this
@@ -432,6 +440,11 @@
   .hero__scatter--x-md { top: 14px; right: 115px; left: auto; bottom: auto; }
   .hero__scatter--star-md { bottom: 150px; left: 40px; top: auto; right: auto; }
   .hero__scatter--star-lg { bottom: 155px; right: 45px; top: auto; left: auto; }
-  .hero__scatter--x-lg { bottom: 95px; right: 16px; top: auto; left: auto; }
-  .hero__scatter--star-xs { bottom: 100px; left: 16px; top: auto; right: auto; }
+
+  /* Same tight illustration-flanking margin as the now-hidden cushions
+     above - same reasoning, same fix. */
+  .hero__scatter--x-lg,
+  .hero__scatter--star-xs {
+    display: none;
+  }
 }
