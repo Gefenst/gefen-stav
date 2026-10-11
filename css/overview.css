@@ -161,4 +161,11 @@
   .overview-card {
     flex-direction: column;
   }
+
+  /* The 24px title-to-body gap was tuned for the desktop side-by-side
+     card; stacked on mobile it reads as an oversized gap between the
+     heading and its own paragraph right under it. */
+  .overview-card__content {
+    gap: 14px;
+  }
 }

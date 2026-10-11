@@ -375,7 +375,11 @@
   }
 
   .hero {
-    padding-bottom: 150px;
+    /* Taller mobile hero - more breathing room above the greeting and
+       below the illustration, giving the doodles below real room to
+       sit without crowding the bottom edge. */
+    padding-top: 90px;
+    padding-bottom: 190px;
   }
 
   /* The desktop doodle positions assume real side margins beside a
@@ -383,7 +387,19 @@
      those same percentages would land the cushions on top of the words.
      Mobile keeps the doodles, but only in the actual empty bands: the
      gap above the greeting and the gap below the illustration - never
-     beside the text. Smaller size to match the smaller canvas. */
+     beside the text. Smaller size to match the smaller canvas.
+
+     Fixed pixel insets (not percentages) from here on: with a left+right
+     pair both set from the desktop `left: X%` values, the two sides
+     never land symmetric (a right-side card's own width pushes its
+     right edge further from the edge than a left-side card's left
+     edge sits from its). Anchoring each side with its own property
+     (left: Npx / right: Npx) guarantees a true mirror. top/bottom are
+     anchored to the hero's own edges the same way, so the clearance
+     stays fixed no matter how tall the illustration renders - the
+     previous top:91% could land the card within a few px of the
+     hero's own bottom edge (its overflow:hidden boundary) depending on
+     total hero height, reading as clipped. */
   .hero__doodles {
     display: block;
   }
@@ -394,18 +410,28 @@
   .hero__doodle-card--search {
     width: 38px;
     height: 38px;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
   }
 
-  .hero__doodle-card--wand { top: 3%; left: 9%; --r: -14deg; }
-  .hero__doodle-card--bulb { top: 3%; left: 76%; --r: 10deg; }
-  .hero__doodle-card--graph { top: 91%; left: 10%; --r: 9deg; }
-  .hero__doodle-card--search { top: 91%; left: 78%; --r: -11deg; }
+  .hero__doodle-card--wand { top: 26px; left: 32px; --r: -14deg; }
+  .hero__doodle-card--bulb { top: 26px; right: 32px; --r: 10deg; }
+  .hero__doodle-card--graph { bottom: 34px; left: 32px; --r: 9deg; }
+  .hero__doodle-card--search { bottom: 34px; right: 32px; --r: -11deg; }
 
-  .hero__scatter--star-sm { top: 10%; left: 28%; }
-  .hero__scatter--x-sm { top: 1%; left: 45%; }
-  .hero__scatter--x-md { top: 12%; right: 10%; left: auto; }
-  .hero__scatter--star-md { top: 94%; left: 32%; }
-  .hero__scatter--star-lg { top: 96%; left: 50%; }
-  .hero__scatter--x-lg { top: 85%; right: 6%; left: auto; }
-  .hero__scatter--star-xs { top: 86%; left: 22%; }
+  /* Scatter marks, same fixed-px logic as the cushions: kept to the two
+     bands that are actually clear of text at any viewport width in this
+     range - the open strip above the greeting (hero top -> 90px) and
+     the strip flanking the illustration (hero bottom -> ~190px, outside
+     its own centered 220px width) - rather than percentages that could
+     drift onto the headline or body copy as their line count changes. */
+  .hero__scatter--star-sm { top: 18px; left: 140px; bottom: auto; right: auto; }
+  .hero__scatter--x-sm { top: 58px; left: 195px; bottom: auto; right: auto; }
+  .hero__scatter--x-md { top: 14px; right: 115px; left: auto; bottom: auto; }
+  .hero__scatter--star-md { bottom: 150px; left: 40px; top: auto; right: auto; }
+  .hero__scatter--star-lg { bottom: 155px; right: 45px; top: auto; left: auto; }
+  .hero__scatter--x-lg { bottom: 95px; right: 16px; top: auto; left: auto; }
+  .hero__scatter--star-xs { bottom: 100px; left: 16px; top: auto; right: auto; }
 }
