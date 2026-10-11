@@ -66,4 +66,15 @@
     height: auto;
     aspect-ratio: 16 / 9;
   }
+
+  /* The hover-to-enlarge effect relies on a real :hover state to shrink
+     back once the pointer leaves - on touch there's no such event, so a
+     tap leaves the thumbnail stuck zoomed in with no way back short of
+     reloading the page. Dropped on mobile; the user can already pinch-
+     zoom any image themselves if they want a closer look. */
+  .research-card__thumb:hover,
+  .research-card__thumb:focus-visible {
+    transform: none;
+    box-shadow: none;
+  }
 }
