@@ -46,8 +46,11 @@
 }
 
 @media (max-width: 500px) {
+  /* Stacking them (both left-aligned, logo above icons) put the two on
+     the same side with no real reason to - row-reverse keeps them side
+     by side like desktop, just swapped so the icons land on the left
+     and the logo on the right instead of logo-left/icons-right. */
   .site-footer__inner {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row-reverse;
   }
 }

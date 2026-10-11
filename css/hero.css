@@ -416,14 +416,16 @@
     right: auto;
   }
 
+  /* Diagonal balance: one cushion top-left, the other bottom-right
+     (opposite corner), rather than both sitting in the top band
+     together. The bottom one lands in the gap between the button and
+     the illustration - not beside the illustration itself, which is
+     only ~77px wide either side of its own centered 220px width and
+     reads as crowding/overlapping the character at a 38px card's size
+     (the reason the other two cushions below are dropped entirely). */
   .hero__doodle-card--wand { top: 26px; left: 32px; --r: -14deg; }
-  .hero__doodle-card--bulb { top: 26px; right: 32px; --r: 10deg; }
-  /* The bottom pair sat right beside the illustration (its own centered
-     220px width leaves only ~77px either side at this viewport), close
-     enough to read as crowding or overlapping the character rather than
-     sitting clearly apart from her. Dropped on mobile instead of
-     fighting for that tight margin - the two top cushions plus the
-     scatter marks below carry the motif on their own. */
+  .hero__doodle-card--bulb { bottom: 165px; right: 32px; --r: 10deg; }
+
   .hero__doodle-card--graph,
   .hero__doodle-card--search {
     display: none;
@@ -439,7 +441,11 @@
   .hero__scatter--x-sm { top: 58px; left: 195px; bottom: auto; right: auto; }
   .hero__scatter--x-md { top: 14px; right: 115px; left: auto; bottom: auto; }
   .hero__scatter--star-md { bottom: 150px; left: 40px; top: auto; right: auto; }
-  .hero__scatter--star-lg { bottom: 155px; right: 45px; top: auto; left: auto; }
+  /* Moved out of the button-to-illustration gap to clear the bulb
+     cushion's new bottom-right spot above - into the illustration's
+     own right-side margin instead, where a small mark (unlike a 38px
+     card) doesn't read as crowding her. */
+  .hero__scatter--star-lg { bottom: 95px; right: 16px; top: auto; left: auto; }
 
   /* Same tight illustration-flanking margin as the now-hidden cushions
      above - same reasoning, same fix. */
