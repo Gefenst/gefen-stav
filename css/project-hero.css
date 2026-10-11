@@ -514,17 +514,25 @@
     width: 104px;
   }
 
+  /* Raised from the Figma reference's own 118px/93px: the reference's
+     title sits lower in its frame than ours does on the no-eyebrow
+     pages (Copilot Chat, AegisCore - a single "POLICIES"/"CHAT COPILOT"
+     line starts right under the subtitle with no "Venus" line above
+     it), so those two stars' boxes land on top of the title text there.
+     65px/40px clears the title on every page (checked against the
+     shortest, title-top case) while keeping the same ~25px gap between
+     the two stars themselves. */
   .project-hero__star--a,
   .project-hero--reversed .project-hero__doodles .project-hero__star--a {
     left: 242px;
-    top: 118px;
+    top: 65px;
     width: 35px;
   }
 
   .project-hero__star--b,
   .project-hero--reversed .project-hero__doodles .project-hero__star--b {
     left: 280px;
-    top: 93px;
+    top: 40px;
     width: 20px;
   }
 }
