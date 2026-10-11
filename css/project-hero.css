@@ -303,6 +303,16 @@
     padding-bottom: 142px;
   }
 
+  /* On the pages whose graphic doesn't nearly fill the viewport width
+     (a narrower screenshot frame rather than the wide laptop mockup),
+     the 38px desktop blur radius reads as a defined ring rather than a
+     soft fade once there's real margin around the image to see it in -
+     the margin was never wide enough on desktop for the difference to
+     show. A bigger mobile-only radius keeps it soft at this scale. */
+  .project-hero__graphic-img {
+    filter: drop-shadow(0 14px 54px color-mix(in srgb, var(--color-accent) 22%, transparent));
+  }
+
   /* Locked to Figma's 375px mobile reference frame, in fixed px - not
      vw/clamp. The reference design was never fluid across this whole
      range in the first place (it's one fixed frame), so scaling it
