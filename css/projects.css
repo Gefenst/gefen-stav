@@ -56,6 +56,15 @@
   padding-block: 12px;
 }
 
+@media (max-width: 600px) {
+  /* On mobile the 80% width leaves visible side gaps against the full-
+     width text above it - widening to match brings the image's own
+     edges flush with the text column instead of looking narrower. */
+  .case-study__preview {
+    width: 100%;
+  }
+}
+
 .case-study__preview img {
   width: 100%;
   height: auto;
