@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Gefen Stav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/project-hero.css" />
+  <link rel="stylesheet" href="css/resume.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html#top" class="back-link">
+        <img src="assets/icons/projects/arrow-dark.svg" alt="" class="back-link__icon" />
+        Back
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Resume sections">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#tools" class="nav-link">Tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="resume-hero" id="top">
+    <div class="resume-hero__card">
+      <div class="resume-hero__profile">
+        <img
+          class="resume-hero__illustration"
+          src="assets/icons/about/illustration-gefen-standing.svg"
+          alt="Illustration of Gefen holding a notebook and laptop"
+        />
+        <div class="resume-hero__id">
+          <p class="resume-hero__name">Gefen Stav</p>
+          <p class="resume-hero__role">Product Designer</p>
+        </div>
+      </div>
+      <div class="resume-hero__aside">
+        <ul class="resume-hero__contact">
+          <li>
+            <span class="resume-hero__icon"><img src="assets/icons/resume/icon-phone.svg" alt="" /></span>
+            <a href="tel:+972509744328">050-9744328</a>
+          </li>
+          <li>
+            <span class="resume-hero__icon"><img src="assets/icons/about/icon-email.svg" alt="" /></span>
+            <button type="button" class="contact-item__copy" data-copy="gefenstav@gmail.com">gefenstav@gmail.com</button>
+          </li>
+          <li>
+            <span class="resume-hero__icon"><img src="assets/icons/resume/icon-linkedin.svg" alt="" /></span>
+            <a href="https://www.linkedin.com/in/gefen-stav/" target="_blank" rel="noopener">linkedin.com/in/gefen-stav</a>
+          </li>
+        </ul>
+        <a href="index.html#projects" class="resume-hero__cta">My portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-body">
+    <div class="resume-body__inner">
+
+      <div class="resume-section" id="about">
+        <p class="resume-eyebrow">About me</p>
+        <p class="text-intro">
+          Product Designer experienced in designing for complex ecosystems
+          and B2B SaaS products. With a foundation in
+          <strong>Psychology and Neuroscience</strong>, I combine
+          <strong>analytical thinking</strong> with
+          <strong>creative design</strong> to deliver user-centered
+          solutions. I lead design initiatives from concept to delivery
+          and am passionate about
+          <strong>simplifying complex workflows into clear, intuitive experiences.</strong>
+        </p>
+      </div>
+
+      <div class="resume-section" id="experience">
+        <p class="resume-eyebrow">Experience</p>
+        <div class="resume-jobs">
+          <article class="resume-job">
+            <div class="resume-job__head">
+              <p class="resume-job__title">UX Designer at Check Point</p>
+              <p class="resume-job__dates">Oct 2021 – Oct 2025</p>
+            </div>
+            <ul class="resume-job__list">
+              <li class="text-intro">Led end-to-end UX design for complex security products (Verity, Copilot, Dome9), transforming heavy technical data into intuitive, user-friendly experiences.</li>
+              <li class="text-intro">Collaborated closely with Product Managers and R&amp;D teams in an Agile environment to ensure design feasibility and seamless delivery.</li>
+              <li class="text-intro">Conducted user research and competitor analysis, leveraging insights to drive design strategy and optimize user flows for maximum efficiency.</li>
+            </ul>
+          </article>
+          <article class="resume-job">
+            <div class="resume-job__head">
+              <p class="resume-job__title">UX Designer at Cyberbit</p>
+              <p class="resume-job__dates">Mar 2020 – Oct 2021</p>
+            </div>
+            <ul class="resume-job__list">
+              <li class="text-intro">Designed complex cyber security interfaces in an Agile environment, collaborating closely with Product and Dev teams.</li>
+              <li class="text-intro">Led usability testing and competitor analysis, creating wireframes and prototypes to validate and improve user flows.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="resume-section" id="education">
+        <p class="resume-eyebrow">Education</p>
+        <div class="resume-edu-list">
+          <div class="resume-edu">
+            <p class="resume-edu__title">UX Design course at “John Bryce” by Tal Florentin</p>
+            <p class="resume-edu__dates">2019</p>
+          </div>
+          <div class="resume-edu">
+            <p class="resume-edu__title">B.A. in Psychology, Neuroscience and Cognition — Ben-Gurion University</p>
+            <p class="resume-edu__dates">2014 – 2017</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-section" id="tools">
+        <p class="resume-eyebrow">Tools &amp; Technologies</p>
+        <ul class="resume-chips">
+          <li class="resume-chip">
+            <img src="assets/icons/resume/icon-figma.svg" alt="" />
+            Figma
+          </li>
+          <li class="resume-chip">
+            <img src="assets/icons/resume/icon-figma-make.svg" alt="" />
+            Figma Make
+          </li>
+          <li class="resume-chip">
+            <img src="assets/icons/resume/icon-claude.svg" alt="" />
+            Claude
+          </li>
+          <li class="resume-chip">
+            <img src="assets/icons/resume/icon-chatgpt.svg" alt="" />
+            ChatGPT
+          </li>
+          <li class="resume-chip">
+            <img src="assets/icons/resume/icon-jira.svg" alt="" />
+            Jira
+          </li>
+          <li class="resume-chip">
+            <img src="assets/icons/resume/icon-monday.svg" alt="" />
+            Monday
+          </li>
+        </ul>
+      </div>
+
+      <div class="resume-section" id="languages">
+        <p class="resume-eyebrow">Languages</p>
+        <p class="text-intro">Hebrew (native), English (Advanced)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a href="index.html#top" class="logo-link">
+        <p class="logo-text">Gefen Stav</p>
+      </a>
+      <div class="site-footer__contact">
+        <a href="mailto:gefenstav@gmail.com" aria-label="Email Gefen Stav">
+          <img src="assets/icons/footer/icon-email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/gefen-stav/" target="_blank" rel="noopener" aria-label="Gefen Stav on LinkedIn">
+          <img src="assets/icons/footer/icon-linkedin.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -101,6 +101,10 @@
   gap: clamp(28px, 3.3vw, 42px);
 }
 
+.about__resume-link {
+  align-self: flex-start;
+}
+
 .contact-list {
   display: flex;
   flex-direction: column;

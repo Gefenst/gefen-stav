@@ -74,6 +74,20 @@ ul {
   font-size: clamp(16px, 1.56vw, 20px);
 }
 
+.btn--secondary {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+  height: clamp(36px, 3.4vw, 44px);
+  padding-inline: clamp(16px, 2vw, 26px);
+  line-height: 1;
+  font-size: clamp(15px, 1.4vw, 18px);
+}
+
+.btn--secondary:hover {
+  color: var(--color-text-light);
+}
+
 /* Nav links: color shift on hover/focus, no underline */
 .nav-link {
   transition: color 0.25s ease;
