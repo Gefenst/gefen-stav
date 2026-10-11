@@ -44,67 +44,16 @@
 
   <section class="hero" id="top">
     <div class="hero__doodles" aria-hidden="true">
-      <div class="hero__doodle-card hero__doodle-card--bulb hero__doodle-card--teal">
-        <svg class="hero__doodle-icon hero__doodle--teal" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M32 19c-9 0-16 7-16 15 0 6 3 10 7 13 2 2 3 4 3 7h12c0-3 1-5 3-7 4-3 7-7 7-13 0-8-7-15-16-15z" />
-          <path d="M26 50h12" />
-          <path d="M27.5 56h9" />
-          <path d="M12 2Q12 8 18 8Q12 8 12 14Q12 8 6 8Q12 8 12 2Z" />
-          <path d="M50 2Q50 6 54 6Q50 6 50 10Q50 6 46 6Q50 6 50 2Z" />
-        </svg>
-      </div>
-      <div class="hero__doodle-card hero__doodle-card--graph hero__doodle-card--blue">
-        <svg class="hero__doodle-icon hero__doodle--blue" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10 58V8" />
-          <path d="M4 15l6-7 6 7" />
-          <path d="M10 58h44" />
-          <path d="M51 52l7 6-7 6" />
-          <path d="M14 46c6-4 10 6 16 2s2-14 10-10 6 10 14 4" />
-          <path d="M44 25.5l4.5-3" />
-          <path d="M48.5 21l4.5-3" />
-        </svg>
-      </div>
-      <div class="hero__doodle-card hero__doodle-card--wand hero__doodle-card--olive">
-        <svg class="hero__doodle-icon hero__doodle--olive" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 58L36 32" />
-          <path d="M46 11Q46 22 57 22Q46 22 46 33Q46 22 35 22Q46 22 46 11Z" />
-          <path d="M55 1Q55 6 60 6Q55 6 55 11Q55 6 50 6Q55 6 55 1Z" />
-          <path d="M33 2Q33 6 37 6Q33 6 33 10Q33 6 29 6Q33 6 33 2Z" />
-        </svg>
-      </div>
-      <div class="hero__doodle-card hero__doodle-card--search hero__doodle-card--mauve">
-        <svg class="hero__doodle-icon hero__doodle--mauve" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="25" cy="25" r="15" />
-          <path d="M19 15Q14 18 14 24" />
-          <path d="M36 36L53 53" />
-          <path d="M46 2Q46 7 51 7Q46 7 46 12Q46 7 41 7Q46 7 46 2Z" />
-        </svg>
-      </div>
-
-      <!-- Loose scatter: a few small stars/x's at different sizes, kept
-           sparse so they read as background texture, not more subjects. -->
-      <svg class="hero__doodle hero__scatter hero__scatter--star-sm hero__doodle--blue" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Soft background circles + two sparkle stars tucked by her head,
+           matching the simplified Figma reference - replaces the old
+           icon-cushion + scattered star/x treatment. -->
+      <div class="hero__blob hero__blob--a"></div>
+      <div class="hero__blob hero__blob--b"></div>
+      <div class="hero__blob hero__blob--c"></div>
+      <svg class="hero__star hero__star--a" viewBox="0 0 16 16" fill="currentColor">
         <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
       </svg>
-      <svg class="hero__doodle hero__scatter hero__scatter--x-sm hero__doodle--mauve" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="hero__doodle hero__scatter hero__scatter--x-md hero__doodle--teal" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="hero__doodle hero__scatter hero__scatter--star-md hero__doodle--olive" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="hero__doodle hero__scatter hero__scatter--star-lg hero__doodle--mauve" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="hero__doodle hero__scatter hero__scatter--x-lg hero__doodle--blue" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="hero__doodle hero__scatter hero__scatter--star-xs hero__doodle--teal" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="hero__star hero__star--b" viewBox="0 0 16 16" fill="currentColor">
         <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
       </svg>
     </div>
@@ -244,72 +193,11 @@
 
   <section class="about" id="about">
     <div class="about__scatter" aria-hidden="true">
-      <svg class="about__scatter-mark about__scatter-mark--1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--6" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--7" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--8" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--9" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--10" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 2Q8 8 14 8Q8 8 8 14Q8 8 2 8Q8 8 8 2Z" />
-      </svg>
-      <svg class="about__scatter-mark about__scatter-mark--19" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-        <path d="M4 4L12 12" />
-        <path d="M12 4L4 12" />
-      </svg>
+      <!-- Soft background circles matching the simplified Figma reference -
+           replaces the old dense star/x starfield. -->
+      <div class="about__blob about__blob--a"></div>
+      <div class="about__blob about__blob--b"></div>
+      <div class="about__blob about__blob--c"></div>
     </div>
     <div class="about__inner">
       <div class="about__palette" aria-hidden="true">

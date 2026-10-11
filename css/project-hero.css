@@ -36,63 +36,86 @@
   overflow: hidden;
 }
 
-/* Same cushion-icon + star/x scatter treatment as the home Hero, but
-   tuned to this page's own single theme color (var(--color-accent) and
-   its tint/dark) instead of all four project colors - this page is
-   about one project, not a preview of all of them. Sits behind the
-   grid content (z-index 0 vs. the inner's 1). */
+/* Soft background circles + two sparkle stars tucked by her head, tuned
+   to this page's own single theme color (var(--color-accent) and its
+   tint/dark) instead of all four project colors - this page is about
+   one project, not a preview of all of them. Matches the simplified
+   Figma reference, replacing the old icon-cushion + scatter treatment.
+   Sits behind the grid content (z-index 0 vs. the inner's 1).
+
+   Constrained to a centered, 1502px-max box - the exact width of the
+   Figma frame the positions below were measured from - rather than the
+   full, unbounded .project-hero width, so the circles/stars stay
+   correctly centered on the page (same center as .project-hero__inner's
+   own 1280px box) instead of drifting outward on very wide viewports. */
 .project-hero__doodles {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 1502px;
+  transform: translateX(-50%);
   z-index: 0;
   pointer-events: none;
   display: none;
 }
 
-.project-hero__doodle-card {
+.project-hero__blob {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 24%;
-  opacity: 0.6;
+  border-radius: 50%;
+  aspect-ratio: 1;
 }
 
-.project-hero__doodle-icon {
-  width: 58%;
-  height: 58%;
-}
-
-/* Three cards, all in the text/character column - matches the
-   reference: one above the headline, two below the line-row either
-   side of the character - none sit over the graphic itself. */
-.project-hero__doodle-card--a { top: 9%; left: 29%; width: 48px; height: 48px; background: var(--color-accent-tint); color: var(--color-accent); transform: rotate(-9deg); }
-.project-hero__doodle-card--b { top: 78%; left: 43%; width: 44px; height: 44px; background: var(--color-accent-tint-soft); color: var(--color-accent-dark); transform: rotate(8deg); }
-.project-hero__doodle-card--c { top: 74%; left: 7%; width: 50px; height: 50px; background: var(--color-accent-tint-soft); color: var(--color-accent-dark); transform: rotate(-14deg); }
-
-.project-hero__scatter-mark {
+.project-hero__star {
   position: absolute;
-  opacity: 0.5;
-  color: var(--color-accent);
+  aspect-ratio: 1;
 }
 
-.project-hero__scatter-mark--1 { top: 4%; left: 4%; width: 12px; height: 12px; transform: rotate(-8deg); }
-.project-hero__scatter-mark--2 { top: 32%; left: 2%; width: 10px; height: 10px; transform: rotate(10deg); color: var(--color-accent-dark); }
-.project-hero__scatter-mark--3 { top: 48%; left: 48%; width: 11px; height: 11px; transform: rotate(-6deg); }
-.project-hero__scatter-mark--4 { top: 85%; left: 42%; width: 13px; height: 13px; transform: rotate(9deg); color: var(--color-accent-dark); }
-.project-hero__scatter-mark--5 { top: 2%; left: 85%; width: 10px; height: 10px; transform: rotate(-11deg); }
+/* left/top mark each piece's CENTER (translate(-50%,-50%)), not its
+   top-left corner.
+   blob--a/c are plain page-relative washes (a big one bleeding off the
+   top, a small one down by the line), so they mirror cleanly as a
+   plain 100%-minus-left for --reversed below. */
+.project-hero__blob--a { left: 38.15%; top: 0.49%; width: clamp(140px, 21.57%, 324px); background: var(--color-accent-tint); transform: translate(-50%, -50%); }
+.project-hero__blob--c { left: 51.5%; top: 72.67%; width: clamp(24px, 3.40%, 51px); background: var(--color-accent-tint-soft); transform: translate(-50%, -50%); }
 
-/* Reversed pages mirror the grid (graphic left, text right) - and the
-   graphic's bleed moves to the left edge with it - so every mark's
-   horizontal position flips too, same distance from the opposite edge. */
-.project-hero--reversed .project-hero__doodle-card--a { left: auto; right: 29%; }
-.project-hero--reversed .project-hero__doodle-card--b { left: auto; right: 43%; }
-.project-hero--reversed .project-hero__doodle-card--c { left: auto; right: 7%; }
-.project-hero--reversed .project-hero__scatter-mark--1 { left: auto; right: 4%; }
-.project-hero--reversed .project-hero__scatter-mark--2 { left: auto; right: 2%; }
-.project-hero--reversed .project-hero__scatter-mark--3 { left: auto; right: 48%; }
-.project-hero--reversed .project-hero__scatter-mark--4 { left: auto; right: 42%; }
-.project-hero--reversed .project-hero__scatter-mark--5 { left: auto; right: 85%; }
+/* blob--b (centered behind the character) and both stars (right by her
+   head) do NOT mirror the same way: .project-hero__character is always
+   inset `right: 21%` of its own line-row, i.e. anchored to the END of
+   the line regardless of layout direction - so she sits near the
+   page's outer edge when --reversed puts her column on the right, but
+   near the page's center (bordering the graphic) in the default
+   layout. Mirroring blob--b/stars' --reversed position with a plain
+   100%-minus-left therefore put them nowhere near her in the default
+   layout (confirmed by measuring .project-hero__character's own
+   rendered center in both layouts - it isn't a mirror). Each set below
+   is measured directly against her actual position in its own layout. */
+.project-hero__blob--b { left: 38.58%; top: 67.94%; width: clamp(60px, 10.05%, 151px); background: var(--color-accent-tint-soft); transform: translate(-50%, -50%); }
+/* Both stars' own boxes sit fully above the character's bounding box
+   (not just offset left/right) - she is positioned close enough here
+   that anything landing inside her box is painted over by her artwork
+   (.project-hero__content stacks above .project-hero__doodles), which
+   silently hid the stars entirely when they were placed left-of-center
+   instead of strictly above. */
+.project-hero__star--a { left: 37.55%; top: 47.6%; width: clamp(18px, 2.33%, 35px); color: var(--color-accent); transform: translate(-50%, -50%); }
+.project-hero__star--b { left: 39.57%; top: 45.16%; width: clamp(11px, 1.33%, 20px); color: var(--color-accent-dark); transform: translate(-50%, -50%); }
+
+.project-hero--reversed .project-hero__blob--a { left: 61.85%; }
+.project-hero--reversed .project-hero__blob--c { left: 48.5%; }
+/* blob--b/stars split further still, between --reversed and the
+   --framed variant of it (AegisCore): --framed's wider graphic column
+   leaves less headroom above her, measured independently rather than
+   reused from the plain --reversed numbers, which put the stars low
+   enough to land inside her box here too (same silent-hide bug as the
+   default layout above, just on the other variant). */
+.project-hero--reversed:not(.project-hero--framed) .project-hero__blob--b { left: 77.2%; top: 68.5%; }
+.project-hero--reversed:not(.project-hero--framed) .project-hero__star--a { left: 74.73%; top: 51.34%; }
+.project-hero--reversed:not(.project-hero--framed) .project-hero__star--b { left: 76.53%; top: 50.31%; }
+
+.project-hero--framed .project-hero__blob--b { left: 77.86%; top: 65%; }
+.project-hero--framed .project-hero__star--a { left: 75.39%; top: 46.34%; }
+.project-hero--framed .project-hero__star--b { left: 77.19%; top: 45.31%; }
 
 @media (min-width: 1240px) {
   .project-hero__doodles {
@@ -434,67 +457,44 @@
     display: none;
   }
 
-  /* The three cushion cards don't fit mobile well - at this content
-     height there's no band roomy enough for a 34px card without it
-     reading as cramped or crowding the title/graphic, the same problem
-     the home hero's bottom cushions had. Dropped on mobile; the five
-     scatter marks below carry the motif on their own, spread evenly
-     across the bands that stay clear of text/graphic at any of the
-     four project pages' differing content heights: the strip above the
-     eyebrow, the strip between the subtitle and the graphic, and the
-     margins either side of the (narrower-than-viewport) graphic. Fixed
-     px, not percentages, and one shared set of positions for both the
-     default and --reversed layouts, since mobile centers both the same
-     way regardless of which side the desktop graphic sits on. */
+  /* Only two circles fit mobile well, same pair in the same spot
+     regardless of layout direction (mobile centers both --default and
+     --reversed the same way) - one peeking from the top corner above
+     the eyebrow/title, one in the band between the subtitle and the
+     graphic. The third circle and both stars are dropped: the stars
+     specifically track the character, who is hidden on mobile (her
+     pose doesn't read as "sitting on" the laptop at this size - see
+     .project-hero__character--mobile above), so they'd have nothing to
+     sit beside. Fixed px, not percentages, anchored from the hero's own
+     top edge so the clearance stays fixed regardless of content height. */
   .project-hero__doodles,
   .project-hero--reversed .project-hero__doodles {
     display: block;
   }
 
-  .project-hero__doodle-card--a,
-  .project-hero__doodle-card--b,
-  .project-hero__doodle-card--c {
+  .project-hero__blob--b,
+  .project-hero__star--a,
+  .project-hero__star--b {
     display: none;
   }
 
-  .project-hero__scatter-mark--1,
-  .project-hero__scatter-mark--2,
-  .project-hero__scatter-mark--3,
-  .project-hero__scatter-mark--4,
-  .project-hero__scatter-mark--5 {
-    top: auto;
-    bottom: auto;
+  .project-hero__blob--a,
+  .project-hero--reversed .project-hero__blob--a {
+    left: -40px;
+    top: -24px;
+    width: 150px;
+    /* Desktop anchors this by its center (translate(-50%,-50%)); mobile's
+       fixed-px values above were tuned for a plain top-left corner. */
+    transform: none;
+  }
+
+  .project-hero__blob--c,
+  .project-hero--reversed .project-hero__blob--c {
     left: auto;
-    right: auto;
-  }
-
-  .project-hero__scatter-mark--1,
-  .project-hero--reversed .project-hero__scatter-mark--1 {
-    top: 18px;
-    left: 46px;
-  }
-
-  .project-hero__scatter-mark--2,
-  .project-hero--reversed .project-hero__scatter-mark--2 {
-    top: 18px;
-    right: 46px;
-  }
-
-  .project-hero__scatter-mark--3,
-  .project-hero--reversed .project-hero__scatter-mark--3 {
-    top: 210px;
-    left: 50%;
-  }
-
-  .project-hero__scatter-mark--4,
-  .project-hero--reversed .project-hero__scatter-mark--4 {
-    top: 345px;
-    left: 14px;
-  }
-
-  .project-hero__scatter-mark--5,
-  .project-hero--reversed .project-hero__scatter-mark--5 {
-    top: 345px;
-    right: 14px;
+    top: auto;
+    right: 24px;
+    bottom: 100px;
+    width: 90px;
+    transform: none;
   }
 }

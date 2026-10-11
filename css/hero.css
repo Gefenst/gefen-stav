@@ -113,70 +113,65 @@
   overflow: hidden;
 }
 
-/* Loose line doodles echoing the project palette, floating free in the
-   hero's side margins - no card, no frame, just pencil marks on the page. */
+/* Soft background circles + two sparkle stars, floating free behind the
+   content - matches the simplified Figma reference (plain washes of
+   color, not icon cushions).
+
+   Constrained to the same centered, 1280px-max box as .hero__decor
+   below (not the full, unbounded .hero width): the Figma reference was
+   captured on a fixed 1280px frame, so every child percentage here is
+   only correct relative to that same fixed width. Spanning the full
+   .hero width instead let left/top drift away from the dot-trail/
+   button/illustration on wide viewports (where .hero itself keeps
+   growing past 1280px) and crowd into the text column just above the
+   1240px breakpoint (where .hero is only a little wider than 1280px) -
+   this keeps the circles/stars pinned to the exact same 1280px frame
+   the rest of the hero's decoration already uses.
+
+   z-index: 0 (vs. .hero__content's 1 and .hero__decor's 2) - explicit,
+   not left to default stacking order, so the circles always stay
+   behind the headline/body text/button no matter how the browser would
+   otherwise resolve a flex-item vs. position:absolute paint order. */
 .hero__doodles {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: var(--container-width);
+  transform: translateX(-50%);
+  z-index: 0;
   pointer-events: none;
   display: none;
 }
 
-.hero__doodle {
+.hero__blob {
   position: absolute;
-  width: 48px;
-  height: 48px;
-  opacity: 0.6;
-  transform: rotate(var(--r, 0deg));
+  border-radius: 50%;
+  aspect-ratio: 1;
 }
 
-/* The four main doodles sit on a soft rounded "cushion" in their own
-   light tint - same idea as the reference icon set, just recolored to
-   each icon's own hue instead of one flat brand color. */
-.hero__doodle-card {
+/* Positions/sizes lifted straight from the Figma reference (percentages
+   of the 1280x641 hero frame), recolored to our own existing palette
+   tints instead of Figma's literal neutral grays. */
+.hero__blob--a { left: 9.69%; top: 4.52%; width: clamp(140px, 26.56%, 340px); background: #e8f3f2; }
+/* True-centered on both axes (left/top mark its CENTER, not top-left
+   corner) on the dot-trail's anchor ring - so shrinking it (below)
+   pulls every edge in symmetrically around that fixed point instead of
+   just the far edges, which is what actually opens up a gap to the
+   button above. */
+.hero__blob--b { left: 50%; top: 84.3%; width: clamp(36px, 6%, 76px); background: #e8eef5; transform: translate(-50%, -50%); }
+.hero__blob--c { left: 81.02%; top: 39.63%; width: clamp(74px, 11.25%, 144px); background: #f5eaef; }
+
+/* Two sparkle stars, sized and placed right by her head - not scattered
+   loosely across the whole hero. */
+.hero__star {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 24%;
-  opacity: 0.6;
-  transform: rotate(var(--r, 0deg));
+  aspect-ratio: 1;
 }
 
-.hero__doodle-icon {
-  width: 58%;
-  height: 58%;
-}
-
-/* Back to both sides, bigger, matching the reference layout: wand+graph
-   framing the headline's left margin, bulb+search framing her on the
-   right - above/beside the illustration, clear of all text and the line. */
-.hero__doodle-card--wand { top: 16%; left: 21%; width: 50px; height: 50px; --r: -16deg; }
-.hero__doodle-card--graph { top: 67%; left: 7%; width: 68px; height: 68px; --r: 9deg; }
-.hero__doodle-card--bulb { top: 35%; left: 84%; width: 66px; height: 66px; --r: -11deg; }
-.hero__doodle-card--search { top: 71%; left: 91%; width: 46px; height: 46px; --r: 13deg; }
-
-.hero__doodle-card--teal { background: #e8f3f2; }
-.hero__doodle-card--blue { background: #e8eef5; }
-.hero__doodle-card--olive { background: #ecede8; }
-.hero__doodle-card--mauve { background: #f5eaef; }
-
-/* A handful of tiny stars/x's filling the gaps between the four main
-   doodles - smaller and fainter than them so they read as scattered
-   dust, not extra subjects competing for attention. */
-.hero__scatter { opacity: 0.55; }
-.hero__scatter--star-sm { top: 30%; left: 6%; width: 13px; height: 13px; --r: -8deg; }
-.hero__scatter--x-sm { top: 56%; right: 20%; width: 11px; height: 11px; --r: 12deg; }
-.hero__scatter--x-md { top: 9%; left: 60%; width: 16px; height: 16px; --r: -6deg; }
-.hero__scatter--star-md { top: 60%; left: 19%; width: 18px; height: 18px; --r: 14deg; }
-.hero__scatter--star-lg { top: 5%; left: 40%; width: 14px; height: 14px; --r: 10deg; }
-.hero__scatter--x-lg { top: 70%; right: 17%; width: 12px; height: 12px; --r: -14deg; }
-.hero__scatter--star-xs { top: 59%; left: 24%; width: 9px; height: 9px; --r: -4deg; }
-
-.hero__doodle--teal { color: #3e9b96; }
-.hero__doodle--blue { color: #3e6fa8; }
-.hero__doodle--olive { color: #5e693d; }
-.hero__doodle--mauve { color: #a8527a; }
+.hero__star--a { left: 84%; top: 62%; width: clamp(18px, 2.73%, 35px); color: #a8527a; }
+.hero__star--b { left: 88%; top: 61%; width: clamp(11px, 1.56%, 20px); color: #83405f; }
 
 /* Only once the hero is wide enough that these sit clear of the centered
    content column (1046px) with real margin either side. */
@@ -195,6 +190,8 @@
 }
 
 .hero__content {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: var(--content-width);
   padding-inline: 20px;
@@ -237,6 +234,7 @@
  */
 .hero__decor {
   position: absolute;
+  z-index: 2;
   left: 0;
   right: 0;
   bottom: 0;
@@ -382,75 +380,48 @@
     padding-bottom: 190px;
   }
 
-  /* The desktop doodle positions assume real side margins beside a
-     centered 1046px column - on a phone the text runs edge-to-edge, so
-     those same percentages would land the cushions on top of the words.
-     Mobile keeps the doodles, but only in the actual empty bands: the
-     gap above the greeting and the gap below the illustration - never
-     beside the text. Smaller size to match the smaller canvas.
-
-     Fixed pixel insets (not percentages) from here on: with a left+right
-     pair both set from the desktop `left: X%` values, the two sides
-     never land symmetric (a right-side card's own width pushes its
-     right edge further from the edge than a left-side card's left
-     edge sits from its). Anchoring each side with its own property
-     (left: Npx / right: Npx) guarantees a true mirror. top/bottom are
-     anchored to the hero's own edges the same way, so the clearance
-     stays fixed no matter how tall the illustration renders - the
-     previous top:91% could land the card within a few px of the
-     hero's own bottom edge (its overflow:hidden boundary) depending on
-     total hero height, reading as clipped. */
+  /* Fixed pixel insets (not percentages): the desktop layout's left/top
+     percentages assume the wide 1280px frame - on a phone those same
+     percentages would land the circles on top of the text. Mobile keeps
+     the motif but re-anchored to the hero's own edges (top for the
+     headline circle, bottom for the illustration circle + stars, which
+     track the illustration's own bottom:10px anchor) so the clearance
+     stays fixed no matter how tall the content renders. */
   .hero__doodles {
     display: block;
   }
 
-  .hero__doodle-card--wand,
-  .hero__doodle-card--graph,
-  .hero__doodle-card--bulb,
-  .hero__doodle-card--search {
-    width: 38px;
-    height: 38px;
-    top: auto;
-    bottom: auto;
+  .hero__blob--a {
+    left: -36px;
+    top: -18px;
+    width: 170px;
+  }
+
+  .hero__blob--b {
+    display: none;
+  }
+
+  .hero__blob--c {
     left: auto;
-    right: auto;
+    top: auto;
+    right: 20px;
+    bottom: 14px;
+    width: 120px;
   }
 
-  /* Diagonal balance: one cushion top-left, the other bottom-right
-     (opposite corner), rather than both sitting in the top band
-     together. The bottom one lands in the gap between the button and
-     the illustration - not beside the illustration itself, which is
-     only ~77px wide either side of its own centered 220px width and
-     reads as crowding/overlapping the character at a 38px card's size
-     (the reason the other two cushions below are dropped entirely). */
-  .hero__doodle-card--wand { top: 26px; left: 32px; --r: -14deg; }
-  .hero__doodle-card--bulb { bottom: 165px; right: 32px; --r: 10deg; }
-
-  .hero__doodle-card--graph,
-  .hero__doodle-card--search {
-    display: none;
+  .hero__star--a {
+    left: auto;
+    top: auto;
+    right: 58px;
+    bottom: 108px;
+    width: 22px;
   }
 
-  /* Scatter marks, same fixed-px logic as the cushions: kept to the two
-     bands that are actually clear of text at any viewport width in this
-     range - the open strip above the greeting (hero top -> 90px) and
-     the strip flanking the illustration (hero bottom -> ~190px, outside
-     its own centered 220px width) - rather than percentages that could
-     drift onto the headline or body copy as their line count changes. */
-  .hero__scatter--star-sm { top: 18px; left: 140px; bottom: auto; right: auto; }
-  .hero__scatter--x-sm { top: 58px; left: 195px; bottom: auto; right: auto; }
-  .hero__scatter--x-md { top: 14px; right: 115px; left: auto; bottom: auto; }
-  .hero__scatter--star-md { bottom: 150px; left: 40px; top: auto; right: auto; }
-  /* Moved out of the button-to-illustration gap to clear the bulb
-     cushion's new bottom-right spot above - into the illustration's
-     own right-side margin instead, where a small mark (unlike a 38px
-     card) doesn't read as crowding her. */
-  .hero__scatter--star-lg { bottom: 95px; right: 16px; top: auto; left: auto; }
-
-  /* Same tight illustration-flanking margin as the now-hidden cushions
-     above - same reasoning, same fix. */
-  .hero__scatter--x-lg,
-  .hero__scatter--star-xs {
-    display: none;
+  .hero__star--b {
+    left: auto;
+    top: auto;
+    right: 40px;
+    bottom: 128px;
+    width: 14px;
   }
 }
