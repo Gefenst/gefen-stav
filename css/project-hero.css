@@ -288,6 +288,21 @@
 }
 
 @media (max-width: 760px) {
+  /* Matches the home hero's own mobile height (padding-top: 90px /
+     padding-bottom: 190px in hero.css) as closely as a shared padding
+     rule can: project heroes carry different content heights per page
+     (an eyebrow line above the title on three of the four, none on the
+     fourth; a one-line vs. two-line title), so no single padding value
+     lands every page on the exact same total - these numbers are tuned
+     to the most common case (title + eyebrow, ~359px of content),
+     which lands within a few px of the home hero's height; pages with
+     shorter content (no eyebrow, or a one-line title) end up a bit
+     shorter still, but far taller than the original 40px/40px. */
+  .project-hero {
+    padding-top: 68px;
+    padding-bottom: 142px;
+  }
+
   /* Locked to Figma's 375px mobile reference frame, in fixed px - not
      vw/clamp. The reference design was never fluid across this whole
      range in the first place (it's one fixed frame), so scaling it
