@@ -325,17 +325,19 @@
 }
 
 @media (max-width: 760px) {
-  /* Equal top/bottom: unlike the home hero, nothing here is bottom-
-     anchored on mobile (the character and her line are both hidden -
-     see .project-hero__character--mobile below), so there's no longer
-     a reason to reserve extra room under the content the way the home
-     hero's illustration still needs. The old asymmetric 68px/142px
-     split was a leftover from when this did carry a bottom-anchored
-     element, and just read as the text+graphic block sitting high in
-     the section with a dead gap underneath. */
+  /* Equal top/bottom, not a shorter section: keeps the section's total
+     height matching the home hero's own mobile height (same 210px of
+     combined top+bottom padding the old 68px/142px split added up to -
+     see the git history for that derivation), just redistributed
+     evenly instead of mostly dumped under the content. The old
+     asymmetric split was sized for a bottom-anchored character that's
+     hidden on mobile, so it read as the text+graphic block sitting
+     high in the section with a dead gap underneath; a plain 68px/68px
+     fixed that but shrank the section itself. 105px/105px keeps the
+     section just as tall while actually centering the content in it. */
   .project-hero {
-    padding-top: 68px;
-    padding-bottom: 68px;
+    padding-top: 105px;
+    padding-bottom: 105px;
   }
 
   /* Now that the graphic is widened to match the text column above
