@@ -236,17 +236,31 @@
   justify-self: end;
 }
 
-.project-hero__graphic-img {
+/* box-shadow, not filter: drop-shadow - deliberately. A drop-shadow
+   filter on (or wrapping) the actual <img> clips its own blur at the
+   bottom edge only, in this rendering engine, once the image is scaled
+   down enough from its native resolution (confirmed with a plain div
+   standing in for the img: identical filter, identical position, full
+   symmetric bleed on every side - it's specifically about a replaced
+   element being involved). box-shadow on this wrapper sidesteps it
+   entirely and reads the same visually for a plain rectangular image. */
+.project-hero__graphic-shadow {
+  display: block;
   width: 85%;
   height: 85%;
-  object-fit: contain;
-  display: block;
   position: relative;
   z-index: 2;
   /* Soft glow in the page's own theme color (var(--color-accent)
      already resolves per-project - teal/blue/olive/mauve) instead of a
      generic neutral drop shadow. */
-  filter: drop-shadow(0 14px 38px color-mix(in srgb, var(--color-accent) 22%, transparent));
+  box-shadow: 0 14px 38px color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+.project-hero__graphic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 
@@ -306,14 +320,11 @@
   /* Now that the graphic is widened to match the text column above
      (see the width rule below), its own side margin is only ~28px -
      too little room for a big blur radius to fade out in before
-     hitting .project-hero's overflow:hidden edge, which was cutting
-     the glow off mid-fade and reading as a flat colored block rather
-     than a shadow (a bigger version of the same problem the original
-     38px desktop radius already had at this width, just more visible
-     once pushed further). Smaller radius, lower opacity, more vertical
-     offset: reads as a shadow sitting under the image, not a halo. */
-  .project-hero__graphic-img {
-    filter: drop-shadow(0 10px 18px color-mix(in srgb, var(--color-accent) 18%, transparent));
+     hitting .project-hero's overflow:hidden edge, reading as a flat
+     colored block rather than a shadow. Smaller radius, lower opacity,
+     more vertical offset: reads as a shadow sitting under the image. */
+  .project-hero__graphic-shadow {
+    box-shadow: 0 10px 18px color-mix(in srgb, var(--color-accent) 18%, transparent);
   }
 
   /* Locked to Figma's 375px mobile reference frame, in fixed px - not
