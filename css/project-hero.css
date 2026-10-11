@@ -303,14 +303,17 @@
     padding-bottom: 142px;
   }
 
-  /* On the pages whose graphic doesn't nearly fill the viewport width
-     (a narrower screenshot frame rather than the wide laptop mockup),
-     the 38px desktop blur radius reads as a defined ring rather than a
-     soft fade once there's real margin around the image to see it in -
-     the margin was never wide enough on desktop for the difference to
-     show. A bigger mobile-only radius keeps it soft at this scale. */
+  /* Now that the graphic is widened to match the text column above
+     (see the width rule below), its own side margin is only ~28px -
+     too little room for a big blur radius to fade out in before
+     hitting .project-hero's overflow:hidden edge, which was cutting
+     the glow off mid-fade and reading as a flat colored block rather
+     than a shadow (a bigger version of the same problem the original
+     38px desktop radius already had at this width, just more visible
+     once pushed further). Smaller radius, lower opacity, more vertical
+     offset: reads as a shadow sitting under the image, not a halo. */
   .project-hero__graphic-img {
-    filter: drop-shadow(0 14px 54px color-mix(in srgb, var(--color-accent) 22%, transparent));
+    filter: drop-shadow(0 10px 18px color-mix(in srgb, var(--color-accent) 18%, transparent));
   }
 
   /* Locked to Figma's 375px mobile reference frame, in fixed px - not
@@ -373,7 +376,16 @@
 
   .project-hero__graphic,
   .project-hero--reversed .project-hero__graphic {
-    width: 319px;
+    /* !important: each project page sets its own inline width (a
+       clamp tuned to that image's native resolution) directly on this
+       element, which otherwise beats any external class rule
+       regardless of media query - this is the one way to still force
+       a shared mobile width across all of them. Matches the text
+       block's own width exactly, so the image's edges line up with
+       the text column above it instead of sitting narrower (or, with
+       only a thin margin around it, making its drop-shadow read as a
+       solid colored block rather than a shadow with room to fade). */
+    width: min(320px, calc(100vw - 48px)) !important;
     /* Figma's own 37px/19px margins were asymmetric to leave room for
        the character bleeding off its right edge. With her removed
        there's no longer a reason for that lopsided offset, so this
