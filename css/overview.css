@@ -36,26 +36,6 @@
   }
 }
 
-/* On mobile the cards run edge-to-edge (see .overview__inner's own
-   20px gutter), so there's no side margin for marks beside the cards -
-   only above/below them. Keep the marks, just thin them to the ones
-   that land in those real gaps instead of on top of a card. */
-@media (max-width: 680px) {
-  .overview__scatter {
-    display: block;
-  }
-
-  .overview__scatter-mark--2,
-  .overview__scatter-mark--3,
-  .overview__scatter-mark--4 {
-    display: none;
-  }
-
-  .overview__scatter-mark--1 { top: 1%; left: 10%; }
-  .overview__scatter-mark--5 { top: 50%; left: 4%; }
-  .overview__scatter-mark--6 { top: 98%; right: 8%; }
-}
-
 .overview__inner {
   max-width: var(--content-width);
   margin-inline: auto;

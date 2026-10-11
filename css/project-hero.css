@@ -325,19 +325,17 @@
 }
 
 @media (max-width: 760px) {
-  /* Matches the home hero's own mobile height (padding-top: 90px /
-     padding-bottom: 190px in hero.css) as closely as a shared padding
-     rule can: project heroes carry different content heights per page
-     (an eyebrow line above the title on three of the four, none on the
-     fourth; a one-line vs. two-line title), so no single padding value
-     lands every page on the exact same total - these numbers are tuned
-     to the most common case (title + eyebrow, ~359px of content),
-     which lands within a few px of the home hero's height; pages with
-     shorter content (no eyebrow, or a one-line title) end up a bit
-     shorter still, but far taller than the original 40px/40px. */
+  /* Equal top/bottom: unlike the home hero, nothing here is bottom-
+     anchored on mobile (the character and her line are both hidden -
+     see .project-hero__character--mobile below), so there's no longer
+     a reason to reserve extra room under the content the way the home
+     hero's illustration still needs. The old asymmetric 68px/142px
+     split was a leftover from when this did carry a bottom-anchored
+     element, and just read as the text+graphic block sitting high in
+     the section with a dead gap underneath. */
   .project-hero {
     padding-top: 68px;
-    padding-bottom: 142px;
+    padding-bottom: 68px;
   }
 
   /* Now that the graphic is widened to match the text column above
