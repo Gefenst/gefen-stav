@@ -401,14 +401,18 @@
     display: none;
   }
 
-  /* Same reasoning as the home hero's mobile doodles: the desktop
-     positions assume side margins beside a wide two-column layout, but
-     mobile stacks into one centered column, so the marks move into the
-     actual empty bands - above the eyebrow, and the side margins either
-     side of the (narrower-than-viewport) centered text/graphic - instead
-     of the text's own left/right edges. One shared set of positions for
-     both the default and --reversed layouts, since mobile centers both
-     the same way regardless of which side the desktop graphic sits on. */
+  /* The three cushion cards don't fit mobile well - at this content
+     height there's no band roomy enough for a 34px card without it
+     reading as cramped or crowding the title/graphic, the same problem
+     the home hero's bottom cushions had. Dropped on mobile; the five
+     scatter marks below carry the motif on their own, spread evenly
+     across the bands that stay clear of text/graphic at any of the
+     four project pages' differing content heights: the strip above the
+     eyebrow, the strip between the subtitle and the graphic, and the
+     margins either side of the (narrower-than-viewport) graphic. Fixed
+     px, not percentages, and one shared set of positions for both the
+     default and --reversed layouts, since mobile centers both the same
+     way regardless of which side the desktop graphic sits on. */
   .project-hero__doodles,
   .project-hero--reversed .project-hero__doodles {
     display: block;
@@ -417,63 +421,47 @@
   .project-hero__doodle-card--a,
   .project-hero__doodle-card--b,
   .project-hero__doodle-card--c {
-    width: 34px;
-    height: 34px;
+    display: none;
   }
 
-  .project-hero__doodle-card--a,
-  .project-hero--reversed .project-hero__doodle-card--a {
-    top: 1%;
-    left: 5%;
+  .project-hero__scatter-mark--1,
+  .project-hero__scatter-mark--2,
+  .project-hero__scatter-mark--3,
+  .project-hero__scatter-mark--4,
+  .project-hero__scatter-mark--5 {
+    top: auto;
+    bottom: auto;
+    left: auto;
     right: auto;
-  }
-
-  .project-hero__doodle-card--b,
-  .project-hero--reversed .project-hero__doodle-card--b {
-    top: 1%;
-    left: auto;
-    right: 5%;
-  }
-
-  .project-hero__doodle-card--c,
-  .project-hero--reversed .project-hero__doodle-card--c {
-    top: 94%;
-    left: auto;
-    right: 6%;
   }
 
   .project-hero__scatter-mark--1,
   .project-hero--reversed .project-hero__scatter-mark--1 {
-    top: 16%;
-    left: 2%;
-    right: auto;
+    top: 18px;
+    left: 46px;
   }
 
   .project-hero__scatter-mark--2,
   .project-hero--reversed .project-hero__scatter-mark--2 {
-    top: 32%;
-    left: auto;
-    right: 2%;
+    top: 18px;
+    right: 46px;
   }
 
   .project-hero__scatter-mark--3,
   .project-hero--reversed .project-hero__scatter-mark--3 {
-    top: 50%;
-    left: 2%;
-    right: auto;
+    top: 210px;
+    left: 50%;
   }
 
   .project-hero__scatter-mark--4,
   .project-hero--reversed .project-hero__scatter-mark--4 {
-    top: 94%;
-    left: 6%;
-    right: auto;
+    top: 345px;
+    left: 14px;
   }
 
   .project-hero__scatter-mark--5,
   .project-hero--reversed .project-hero__scatter-mark--5 {
-    top: 10%;
-    left: 50%;
-    right: auto;
+    top: 345px;
+    right: 14px;
   }
 }
